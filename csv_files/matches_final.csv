@@ -1,0 +1,381 @@
+MatchID,Matchday,Date,Home,Away
+0,1,09-12-2020,Burnley FC,Manchester United
+1,1,09-12-2020,Manchester City FC,Aston Villa FC
+2,1,09-12-2020,Fulham FC,Arsenal FC
+3,1,09-12-2020,Crystal Palace FC,Southampton FC
+4,1,09-12-2020,Liverpool FC,Leeds United FC
+5,1,09-12-2020,West Ham United FC,Newcastle United FC
+6,1,09-13-2020,West Bromwich Albion FC,Leicester City FC
+7,1,09-13-2020,Tottenham Hotspur FC,Everton FC
+8,1,09-14-2020,Sheffield United FC,Wolverhampton Wanderers FC
+9,1,09-14-2020,Brighton & Hove Albion FC,Chelsea FC
+10,2,09-19-2020,Everton FC,West Bromwich Albion FC
+11,2,09-19-2020,Leeds United FC,Fulham FC
+12,2,09-19-2020,Manchester United,Crystal Palace FC
+13,2,09-19-2020,Arsenal FC,West Ham United FC
+14,2,09-20-2020,Southampton FC,Tottenham Hotspur FC
+15,2,09-20-2020,Newcastle United FC,Brighton & Hove Albion FC
+16,2,09-20-2020,Chelsea FC,Liverpool FC
+17,2,09-20-2020,Leicester City FC,Burnley FC
+18,2,09-21-2020,Aston Villa FC,Sheffield United FC
+19,2,09-21-2020,Wolverhampton Wanderers FC,Manchester City FC
+20,3,09-26-2020,Brighton & Hove Albion FC,Manchester United
+21,3,09-26-2020,Crystal Palace FC,Everton FC
+22,3,09-26-2020,West Bromwich Albion FC,Chelsea FC
+23,3,09-26-2020,Burnley FC,Southampton FC
+24,3,09-27-2020,Sheffield United FC,Leeds United FC
+25,3,09-27-2020,Tottenham Hotspur FC,Newcastle United FC
+26,3,09-27-2020,Manchester City FC,Leicester City FC
+27,3,09-27-2020,West Ham United FC,Wolverhampton Wanderers FC
+28,3,09-28-2020,Fulham FC,Aston Villa FC
+29,3,09-28-2020,Liverpool FC,Arsenal FC
+30,4,10-03-2020,Arsenal FC,Sheffield United FC
+31,4,10-03-2020,Aston Villa FC,Liverpool FC
+32,4,10-03-2020,Chelsea FC,Crystal Palace FC
+33,4,10-03-2020,Everton FC,Brighton & Hove Albion FC
+34,4,10-03-2020,Leeds United FC,Manchester City FC
+35,4,10-03-2020,Leicester City FC,West Ham United FC
+36,4,10-03-2020,Manchester United,Tottenham Hotspur FC
+37,4,10-03-2020,Newcastle United FC,Burnley FC
+38,4,10-03-2020,Southampton FC,West Bromwich Albion FC
+39,4,10-03-2020,Wolverhampton Wanderers FC,Fulham FC
+40,5,10-17-2020,Chelsea FC,Southampton FC
+41,5,10-17-2020,Crystal Palace FC,Brighton & Hove Albion FC
+42,5,10-17-2020,Everton FC,Liverpool FC
+43,5,10-17-2020,Leeds United FC,Wolverhampton Wanderers FC
+44,5,10-17-2020,Leicester City FC,Aston Villa FC
+45,5,10-17-2020,Manchester City FC,Arsenal FC
+46,5,10-17-2020,Newcastle United FC,Manchester United
+47,5,10-17-2020,Sheffield United FC,Fulham FC
+48,5,10-17-2020,Tottenham Hotspur FC,West Ham United FC
+49,5,10-17-2020,West Bromwich Albion FC,Burnley FC
+50,6,10-24-2020,Arsenal FC,Leicester City FC
+51,6,10-24-2020,Aston Villa FC,Leeds United FC
+52,6,10-24-2020,Brighton & Hove Albion FC,West Bromwich Albion FC
+53,6,10-24-2020,Burnley FC,Tottenham Hotspur FC
+54,6,10-24-2020,Fulham FC,Crystal Palace FC
+55,6,10-24-2020,Liverpool FC,Sheffield United FC
+56,6,10-24-2020,Manchester United,Chelsea FC
+57,6,10-24-2020,Southampton FC,Everton FC
+58,6,10-24-2020,West Ham United FC,Manchester City FC
+59,6,10-24-2020,Wolverhampton Wanderers FC,Newcastle United FC
+60,7,10-31-2020,Aston Villa FC,Southampton FC
+61,7,10-31-2020,Burnley FC,Chelsea FC
+62,7,10-31-2020,Fulham FC,West Bromwich Albion FC
+63,7,10-31-2020,Leeds United FC,Leicester City FC
+64,7,10-31-2020,Liverpool FC,West Ham United FC
+65,7,10-31-2020,Manchester United,Arsenal FC
+66,7,10-31-2020,Newcastle United FC,Everton FC
+67,7,10-31-2020,Sheffield United FC,Manchester City FC
+68,7,10-31-2020,Tottenham Hotspur FC,Brighton & Hove Albion FC
+69,7,10-31-2020,Wolverhampton Wanderers FC,Crystal Palace FC
+70,8,11-07-2020,Arsenal FC,Aston Villa FC
+71,8,11-07-2020,Brighton & Hove Albion FC,Burnley FC
+72,8,11-07-2020,Chelsea FC,Sheffield United FC
+73,8,11-07-2020,Crystal Palace FC,Leeds United FC
+74,8,11-07-2020,Everton FC,Manchester United
+75,8,11-07-2020,Leicester City FC,Wolverhampton Wanderers FC
+76,8,11-07-2020,Manchester City FC,Liverpool FC
+77,8,11-07-2020,Southampton FC,Newcastle United FC
+78,8,11-07-2020,West Bromwich Albion FC,Tottenham Hotspur FC
+79,8,11-07-2020,West Ham United FC,Fulham FC
+80,9,11-21-2020,Aston Villa FC,Brighton & Hove Albion FC
+81,9,11-21-2020,Burnley FC,Crystal Palace FC
+82,9,11-21-2020,Fulham FC,Everton FC
+83,9,11-21-2020,Leeds United FC,Arsenal FC
+84,9,11-21-2020,Liverpool FC,Leicester City FC
+85,9,11-21-2020,Manchester United,West Bromwich Albion FC
+86,9,11-21-2020,Newcastle United FC,Chelsea FC
+87,9,11-21-2020,Sheffield United FC,West Ham United FC
+88,9,11-21-2020,Tottenham Hotspur FC,Manchester City FC
+89,9,11-21-2020,Wolverhampton Wanderers FC,Southampton FC
+90,10,11-28-2020,Arsenal FC,Wolverhampton Wanderers FC
+91,10,11-28-2020,Brighton & Hove Albion FC,Liverpool FC
+92,10,11-28-2020,Chelsea FC,Tottenham Hotspur FC
+93,10,11-28-2020,Crystal Palace FC,Newcastle United FC
+94,10,11-28-2020,Everton FC,Leeds United FC
+95,10,11-28-2020,Leicester City FC,Fulham FC
+96,10,11-28-2020,Manchester City FC,Burnley FC
+97,10,11-28-2020,Southampton FC,Manchester United
+98,10,11-28-2020,West Bromwich Albion FC,Sheffield United FC
+99,10,11-28-2020,West Ham United FC,Aston Villa FC
+100,11,12-05-2020,Aston Villa FC,Newcastle United FC
+101,11,12-05-2020,Brighton & Hove Albion FC,Southampton FC
+102,11,12-05-2020,Burnley FC,Everton FC
+103,11,12-05-2020,Chelsea FC,Leeds United FC
+104,11,12-05-2020,Liverpool FC,Wolverhampton Wanderers FC
+105,11,12-05-2020,Manchester City FC,Fulham FC
+106,11,12-05-2020,Sheffield United FC,Leicester City FC
+107,11,12-05-2020,Tottenham Hotspur FC,Arsenal FC
+108,11,12-05-2020,West Bromwich Albion FC,Crystal Palace FC
+109,11,12-05-2020,West Ham United FC,Manchester United
+110,12,12-12-2020,Arsenal FC,Burnley FC
+111,12,12-12-2020,Crystal Palace FC,Tottenham Hotspur FC
+112,12,12-12-2020,Everton FC,Chelsea FC
+113,12,12-12-2020,Fulham FC,Liverpool FC
+114,12,12-12-2020,Leeds United FC,West Ham United FC
+115,12,12-12-2020,Leicester City FC,Brighton & Hove Albion FC
+116,12,12-12-2020,Manchester United,Manchester City FC
+117,12,12-12-2020,Newcastle United FC,West Bromwich Albion FC
+118,12,12-12-2020,Southampton FC,Sheffield United FC
+119,12,12-12-2020,Wolverhampton Wanderers FC,Aston Villa FC
+120,13,12-15-2020,Arsenal FC,Southampton FC
+121,13,12-15-2020,Aston Villa FC,Burnley FC
+122,13,12-15-2020,Fulham FC,Brighton & Hove Albion FC
+123,13,12-15-2020,Leeds United FC,Newcastle United FC
+124,13,12-15-2020,Leicester City FC,Everton FC
+125,13,12-15-2020,Sheffield United FC,Manchester United
+126,13,12-15-2020,West Ham United FC,Crystal Palace FC
+127,13,12-15-2020,Wolverhampton Wanderers FC,Chelsea FC
+128,13,12-16-2020,Liverpool FC,Tottenham Hotspur FC
+129,13,12-16-2020,Manchester City FC,West Bromwich Albion FC
+130,14,12-19-2020,Brighton & Hove Albion FC,Sheffield United FC
+131,14,12-19-2020,Burnley FC,Wolverhampton Wanderers FC
+132,14,12-19-2020,Chelsea FC,West Ham United FC
+133,14,12-19-2020,Crystal Palace FC,Liverpool FC
+134,14,12-19-2020,Everton FC,Arsenal FC
+135,14,12-19-2020,Manchester United,Leeds United FC
+136,14,12-19-2020,Newcastle United FC,Fulham FC
+137,14,12-19-2020,Southampton FC,Manchester City FC
+138,14,12-19-2020,Tottenham Hotspur FC,Leicester City FC
+139,14,12-19-2020,West Bromwich Albion FC,Aston Villa FC
+140,15,12-26-2020,Arsenal FC,Chelsea FC
+141,15,12-26-2020,Aston Villa FC,Crystal Palace FC
+142,15,12-26-2020,Fulham FC,Southampton FC
+143,15,12-26-2020,Leeds United FC,Burnley FC
+144,15,12-26-2020,Leicester City FC,Manchester United
+145,15,12-26-2020,Liverpool FC,West Bromwich Albion FC
+146,15,12-26-2020,Manchester City FC,Newcastle United FC
+147,15,12-26-2020,Sheffield United FC,Everton FC
+148,15,12-26-2020,West Ham United FC,Brighton & Hove Albion FC
+149,15,12-26-2020,Wolverhampton Wanderers FC,Tottenham Hotspur FC
+150,16,12-28-2020,Brighton & Hove Albion FC,Arsenal FC
+151,16,12-28-2020,Burnley FC,Sheffield United FC
+152,16,12-28-2020,Chelsea FC,Aston Villa FC
+153,16,12-28-2020,Crystal Palace FC,Leicester City FC
+154,16,12-28-2020,Everton FC,Manchester City FC
+155,16,12-28-2020,Manchester United,Wolverhampton Wanderers FC
+156,16,12-28-2020,Newcastle United FC,Liverpool FC
+157,16,12-28-2020,Southampton FC,West Ham United FC
+158,16,12-28-2020,Tottenham Hotspur FC,Fulham FC
+159,16,12-28-2020,West Bromwich Albion FC,Leeds United FC
+160,17,01-02-2021,Brighton & Hove Albion FC,Wolverhampton Wanderers FC
+161,17,01-02-2021,Burnley FC,Fulham FC
+162,17,01-02-2021,Chelsea FC,Manchester City FC
+163,17,01-02-2021,Crystal Palace FC,Sheffield United FC
+164,17,01-02-2021,Everton FC,West Ham United FC
+165,17,01-02-2021,Manchester United,Aston Villa FC
+166,17,01-02-2021,Newcastle United FC,Leicester City FC
+167,17,01-02-2021,Southampton FC,Liverpool FC
+168,17,01-02-2021,Tottenham Hotspur FC,Leeds United FC
+169,17,01-02-2021,West Bromwich Albion FC,Arsenal FC
+170,18,01-12-2021,Arsenal FC,Crystal Palace FC
+171,18,01-12-2021,Aston Villa FC,Tottenham Hotspur FC
+172,18,01-12-2021,Fulham FC,Manchester United
+173,18,01-12-2021,Leeds United FC,Southampton FC
+174,18,01-12-2021,Leicester City FC,Chelsea FC
+175,18,01-12-2021,Sheffield United FC,Newcastle United FC
+176,18,01-12-2021,West Ham United FC,West Bromwich Albion FC
+177,18,01-12-2021,Wolverhampton Wanderers FC,Everton FC
+178,18,01-13-2021,Liverpool FC,Burnley FC
+179,18,01-13-2021,Manchester City FC,Brighton & Hove Albion FC
+180,19,01-16-2021,Arsenal FC,Newcastle United FC
+181,19,01-16-2021,Aston Villa FC,Everton FC
+182,19,01-16-2021,Fulham FC,Chelsea FC
+183,19,01-16-2021,Leeds United FC,Brighton & Hove Albion FC
+184,19,01-16-2021,Leicester City FC,Southampton FC
+185,19,01-16-2021,Liverpool FC,Manchester United
+186,19,01-16-2021,Manchester City FC,Crystal Palace FC
+187,19,01-16-2021,Sheffield United FC,Tottenham Hotspur FC
+188,19,01-16-2021,West Ham United FC,Burnley FC
+189,19,01-16-2021,Wolverhampton Wanderers FC,West Bromwich Albion FC
+190,20,01-26-2021,Brighton & Hove Albion FC,Fulham FC
+191,20,01-26-2021,Burnley FC,Aston Villa FC
+192,20,01-26-2021,Everton FC,Leicester City FC
+193,20,01-26-2021,Manchester United,Sheffield United FC
+194,20,01-26-2021,West Bromwich Albion FC,Manchester City FC
+195,20,01-27-2021,Chelsea FC,Wolverhampton Wanderers FC
+196,20,01-27-2021,Newcastle United FC,Leeds United FC
+197,20,01-27-2021,Southampton FC,Arsenal FC
+198,20,01-27-2021,Tottenham Hotspur FC,Liverpool FC
+199,20,01-27-2021,Crystal Palace FC,West Ham United FC
+200,21,01-30-2021,Arsenal FC,Manchester United
+201,21,01-30-2021,Brighton & Hove Albion FC,Tottenham Hotspur FC
+202,21,01-30-2021,Chelsea FC,Burnley FC
+203,21,01-30-2021,Crystal Palace FC,Wolverhampton Wanderers FC
+204,21,01-30-2021,Everton FC,Newcastle United FC
+205,21,01-30-2021,Leicester City FC,Leeds United FC
+206,21,01-30-2021,Manchester City FC,Sheffield United FC
+207,21,01-30-2021,Southampton FC,Aston Villa FC
+208,21,01-30-2021,West Bromwich Albion FC,Fulham FC
+209,21,01-30-2021,West Ham United FC,Liverpool FC
+210,22,02-02-2021,Aston Villa FC,West Ham United FC
+211,22,02-02-2021,Burnley FC,Manchester City FC
+212,22,02-02-2021,Fulham FC,Leicester City FC
+213,22,02-02-2021,Leeds United FC,Everton FC
+214,22,02-02-2021,Sheffield United FC,West Bromwich Albion FC
+215,22,02-02-2021,Wolverhampton Wanderers FC,Arsenal FC
+216,22,02-02-2021,Manchester United,Southampton FC
+217,22,02-03-2021,Newcastle United FC,Crystal Palace FC
+218,22,02-03-2021,Tottenham Hotspur FC,Chelsea FC
+219,22,02-03-2021,Liverpool FC,Brighton & Hove Albion FC
+220,23,02-06-2021,Aston Villa FC,Arsenal FC
+221,23,02-06-2021,Burnley FC,Brighton & Hove Albion FC
+222,23,02-06-2021,Fulham FC,West Ham United FC
+223,23,02-06-2021,Leeds United FC,Crystal Palace FC
+224,23,02-06-2021,Liverpool FC,Manchester City FC
+225,23,02-06-2021,Manchester United,Everton FC
+226,23,02-06-2021,Newcastle United FC,Southampton FC
+227,23,02-06-2021,Sheffield United FC,Chelsea FC
+228,23,02-06-2021,Tottenham Hotspur FC,West Bromwich Albion FC
+229,23,02-06-2021,Wolverhampton Wanderers FC,Leicester City FC
+230,24,02-13-2021,Arsenal FC,Leeds United FC
+231,24,02-13-2021,Brighton & Hove Albion FC,Aston Villa FC
+232,24,02-13-2021,Chelsea FC,Newcastle United FC
+233,24,02-13-2021,Crystal Palace FC,Burnley FC
+234,24,02-13-2021,Everton FC,Fulham FC
+235,24,02-13-2021,Leicester City FC,Liverpool FC
+236,24,02-13-2021,Manchester City FC,Tottenham Hotspur FC
+237,24,02-13-2021,Southampton FC,Wolverhampton Wanderers FC
+238,24,02-13-2021,West Bromwich Albion FC,Manchester United
+239,24,02-13-2021,West Ham United FC,Sheffield United FC
+240,25,02-20-2021,Arsenal FC,Manchester City FC
+241,25,02-20-2021,Aston Villa FC,Leicester City FC
+242,25,02-20-2021,Brighton & Hove Albion FC,Crystal Palace FC
+243,25,02-20-2021,Burnley FC,West Bromwich Albion FC
+244,25,02-20-2021,Fulham FC,Sheffield United FC
+245,25,02-20-2021,Liverpool FC,Everton FC
+246,25,02-20-2021,Manchester United,Newcastle United FC
+247,25,02-20-2021,Southampton FC,Chelsea FC
+248,25,02-20-2021,West Ham United FC,Tottenham Hotspur FC
+249,25,02-20-2021,Wolverhampton Wanderers FC,Leeds United FC
+250,26,02-27-2021,Chelsea FC,Manchester United
+251,26,02-27-2021,Crystal Palace FC,Fulham FC
+252,26,02-27-2021,Everton FC,Southampton FC
+253,26,02-27-2021,Leeds United FC,Aston Villa FC
+254,26,02-27-2021,Leicester City FC,Arsenal FC
+255,26,02-27-2021,Manchester City FC,West Ham United FC
+256,26,02-27-2021,Newcastle United FC,Wolverhampton Wanderers FC
+257,26,02-27-2021,Sheffield United FC,Liverpool FC
+258,26,02-27-2021,Tottenham Hotspur FC,Burnley FC
+259,26,02-27-2021,West Bromwich Albion FC,Brighton & Hove Albion FC
+260,27,03-06-2021,Aston Villa FC,Wolverhampton Wanderers FC
+261,27,03-06-2021,Brighton & Hove Albion FC,Leicester City FC
+262,27,03-06-2021,Burnley FC,Arsenal FC
+263,27,03-06-2021,Chelsea FC,Everton FC
+264,27,03-06-2021,Liverpool FC,Fulham FC
+265,27,03-06-2021,Manchester City FC,Manchester United
+266,27,03-06-2021,Sheffield United FC,Southampton FC
+267,27,03-06-2021,Tottenham Hotspur FC,Crystal Palace FC
+268,27,03-06-2021,West Bromwich Albion FC,Newcastle United FC
+269,27,03-06-2021,West Ham United FC,Leeds United FC
+270,28,03-13-2021,Arsenal FC,Tottenham Hotspur FC
+271,28,03-13-2021,Crystal Palace FC,West Bromwich Albion FC
+272,28,03-13-2021,Everton FC,Burnley FC
+273,28,03-13-2021,Fulham FC,Manchester City FC
+274,28,03-13-2021,Leeds United FC,Chelsea FC
+275,28,03-13-2021,Leicester City FC,Sheffield United FC
+276,28,03-13-2021,Manchester United,West Ham United FC
+277,28,03-13-2021,Newcastle United FC,Aston Villa FC
+278,28,03-13-2021,Southampton FC,Brighton & Hove Albion FC
+279,28,03-13-2021,Wolverhampton Wanderers FC,Liverpool FC
+280,29,03-20-2021,Brighton & Hove Albion FC,Newcastle United FC
+281,29,03-20-2021,Burnley FC,Leicester City FC
+282,29,03-20-2021,Crystal Palace FC,Manchester United
+283,29,03-20-2021,Fulham FC,Leeds United FC
+284,29,03-20-2021,Liverpool FC,Chelsea FC
+285,29,03-20-2021,Manchester City FC,Wolverhampton Wanderers FC
+286,29,03-20-2021,Sheffield United FC,Aston Villa FC
+287,29,03-20-2021,Tottenham Hotspur FC,Southampton FC
+288,29,03-20-2021,West Bromwich Albion FC,Everton FC
+289,29,03-20-2021,West Ham United FC,Arsenal FC
+290,30,04-03-2021,Arsenal FC,Liverpool FC
+291,30,04-03-2021,Aston Villa FC,Fulham FC
+292,30,04-03-2021,Chelsea FC,West Bromwich Albion FC
+293,30,04-03-2021,Everton FC,Crystal Palace FC
+294,30,04-03-2021,Leeds United FC,Sheffield United FC
+295,30,04-03-2021,Leicester City FC,Manchester City FC
+296,30,04-03-2021,Manchester United,Brighton & Hove Albion FC
+297,30,04-03-2021,Newcastle United FC,Tottenham Hotspur FC
+298,30,04-03-2021,Southampton FC,Burnley FC
+299,30,04-03-2021,Wolverhampton Wanderers FC,West Ham United FC
+300,31,04-10-2021,Brighton & Hove Albion FC,Everton FC
+301,31,04-10-2021,Burnley FC,Newcastle United FC
+302,31,04-10-2021,Crystal Palace FC,Chelsea FC
+303,31,04-10-2021,Fulham FC,Wolverhampton Wanderers FC
+304,31,04-10-2021,Liverpool FC,Aston Villa FC
+305,31,04-10-2021,Manchester City FC,Leeds United FC
+306,31,04-10-2021,Sheffield United FC,Arsenal FC
+307,31,04-10-2021,Tottenham Hotspur FC,Manchester United
+308,31,04-10-2021,West Bromwich Albion FC,Southampton FC
+309,31,04-10-2021,West Ham United FC,Leicester City FC
+310,32,04-17-2021,Arsenal FC,Fulham FC
+311,32,04-17-2021,Aston Villa FC,Manchester City FC
+312,32,04-17-2021,Chelsea FC,Brighton & Hove Albion FC
+313,32,04-17-2021,Everton FC,Tottenham Hotspur FC
+314,32,04-17-2021,Leeds United FC,Liverpool FC
+315,32,04-17-2021,Leicester City FC,West Bromwich Albion FC
+316,32,04-17-2021,Manchester United,Burnley FC
+317,32,04-17-2021,Newcastle United FC,West Ham United FC
+318,32,04-17-2021,Southampton FC,Crystal Palace FC
+319,32,04-17-2021,Wolverhampton Wanderers FC,Sheffield United FC
+320,33,04-24-2021,Arsenal FC,Everton FC
+321,33,04-24-2021,Aston Villa FC,West Bromwich Albion FC
+322,33,04-24-2021,Fulham FC,Tottenham Hotspur FC
+323,33,04-24-2021,Leeds United FC,Manchester United
+324,33,04-24-2021,Leicester City FC,Crystal Palace FC
+325,33,04-24-2021,Liverpool FC,Newcastle United FC
+326,33,04-24-2021,Manchester City FC,Southampton FC
+327,33,04-24-2021,Sheffield United FC,Brighton & Hove Albion FC
+328,33,04-24-2021,West Ham United FC,Chelsea FC
+329,33,04-24-2021,Wolverhampton Wanderers FC,Burnley FC
+330,34,05-01-2021,Brighton & Hove Albion FC,Leeds United FC
+331,34,05-01-2021,Burnley FC,West Ham United FC
+332,34,05-01-2021,Chelsea FC,Fulham FC
+333,34,05-01-2021,Crystal Palace FC,Manchester City FC
+334,34,05-01-2021,Everton FC,Aston Villa FC
+335,34,05-01-2021,Manchester United,Liverpool FC
+336,34,05-01-2021,Newcastle United FC,Arsenal FC
+337,34,05-01-2021,Southampton FC,Leicester City FC
+338,34,05-01-2021,Tottenham Hotspur FC,Sheffield United FC
+339,34,05-01-2021,West Bromwich Albion FC,Wolverhampton Wanderers FC
+340,35,05-08-2021,Arsenal FC,West Bromwich Albion FC
+341,35,05-08-2021,Aston Villa FC,Manchester United
+342,35,05-08-2021,Fulham FC,Burnley FC
+343,35,05-08-2021,Leeds United FC,Tottenham Hotspur FC
+344,35,05-08-2021,Leicester City FC,Newcastle United FC
+345,35,05-08-2021,Liverpool FC,Southampton FC
+346,35,05-08-2021,Manchester City FC,Chelsea FC
+347,35,05-08-2021,Sheffield United FC,Crystal Palace FC
+348,35,05-08-2021,West Ham United FC,Everton FC
+349,35,05-08-2021,Wolverhampton Wanderers FC,Brighton & Hove Albion FC
+350,36,05-11-2021,Brighton & Hove Albion FC,West Ham United FC
+351,36,05-11-2021,Burnley FC,Leeds United FC
+352,36,05-11-2021,Everton FC,Sheffield United FC
+353,36,05-11-2021,Manchester United,Leicester City FC
+354,36,05-11-2021,West Bromwich Albion FC,Liverpool FC
+355,36,05-12-2021,Chelsea FC,Arsenal FC
+356,36,05-12-2021,Newcastle United FC,Manchester City FC
+357,36,05-12-2021,Southampton FC,Fulham FC
+358,36,05-12-2021,Tottenham Hotspur FC,Wolverhampton Wanderers FC
+359,36,05-12-2021,Crystal Palace FC,Aston Villa FC
+360,37,05-15-2021,Brighton & Hove Albion FC,Manchester City FC
+361,37,05-15-2021,Burnley FC,Liverpool FC
+362,37,05-15-2021,Chelsea FC,Leicester City FC
+363,37,05-15-2021,Crystal Palace FC,Arsenal FC
+364,37,05-15-2021,Everton FC,Wolverhampton Wanderers FC
+365,37,05-15-2021,Manchester United,Fulham FC
+366,37,05-15-2021,Newcastle United FC,Sheffield United FC
+367,37,05-15-2021,Southampton FC,Leeds United FC
+368,37,05-15-2021,Tottenham Hotspur FC,Aston Villa FC
+369,37,05-15-2021,West Bromwich Albion FC,West Ham United FC
+370,38,05-23-2021,Arsenal FC,Brighton & Hove Albion FC
+371,38,05-23-2021,Aston Villa FC,Chelsea FC
+372,38,05-23-2021,Fulham FC,Newcastle United FC
+373,38,05-23-2021,Leeds United FC,West Bromwich Albion FC
+374,38,05-23-2021,Leicester City FC,Tottenham Hotspur FC
+375,38,05-23-2021,Liverpool FC,Crystal Palace FC
+376,38,05-23-2021,Manchester City FC,Everton FC
+377,38,05-23-2021,Sheffield United FC,Burnley FC
+378,38,05-23-2021,West Ham United FC,Southampton FC
+379,38,05-23-2021,Wolverhampton Wanderers FC,Manchester United

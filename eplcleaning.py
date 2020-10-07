@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 import re
 
 df = pd.read_csv('/Users/alihaidar/Projects/Python/fantasyepl/eplfixturesdata.txt')
@@ -26,23 +27,23 @@ for i in range (len(df_clean.index)) :
         day = int(re.search(r'\d+', df_clean['Teams'].iloc[i]).group())
         row = {'Matchday' : day}
     elif ('Sep') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 20'
     elif ('Oct') in df_clean['Teams'].iloc[i]:
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 20'
     elif ('Nov') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 20'
     elif ('Dec') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 20'
     elif ('Jan') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 21'
     elif ('Feb') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 21'
     elif ('Mar') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 21'
     elif ('Apr') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 21'
     elif ('May') in df_clean['Teams'].iloc[i] :
-        row['Date'] = df_clean['Teams'].iloc[i]
+        row['Date'] = df_clean['Teams'].iloc[i] + ' 21'
     else :
         df_matchday.loc[i] = row
     
@@ -65,9 +66,18 @@ df_fixtures.to_csv('csv_files/fixtures_out.csv')
 # merge both on index to create final table and export to csv
 df_final = pd.merge(df_matchday, df_fixtures, left_index=True, right_index=True)
 
-# split match into Hame and Away, drop, then export to csv
-df_final[['Home Team', 'Away Team']] = df_final.Match.str.split(',', expand=True)
-df_final.drop(['Match'], axis=1, inplace=True)
-df_final.to_csv('csv_files/final_dataframe.csv')
+# format the date so that it can be imported properly into MS SQL
+def format_date(el):
+    return datetime.strptime(el, '%b %d %y').strftime('%m-%d-%Y')
 
-print(df_final)
+df_final['Date'] = df_final['Date'].apply(format_date)
+
+
+# split match into Hame and Away, drop, then export to csv
+df_final[['Home', 'Away']] = df_final.Match.str.split(',', expand=True)
+df_final.drop(['Match'], axis=1, inplace=True)
+df_final.to_csv('csv_files/matches_final.csv', index_label="MatchID")
+
+print(df_final.columns)
+
+
