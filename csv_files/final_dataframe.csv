@@ -1,0 +1,381 @@
+,Matchday,Date,Home Team,Away Team
+0,1,Sep 12,Burnley FC,Manchester United
+1,1,Sep 12,Manchester City FC,Aston Villa FC
+2,1,Sep 12,Fulham FC,Arsenal FC
+3,1,Sep 12,Crystal Palace FC,Southampton FC
+4,1,Sep 12,Liverpool FC,Leeds United FC
+5,1,Sep 12,West Ham United FC,Newcastle United FC
+6,1,Sep 13,West Bromwich Albion FC,Leicester City FC
+7,1,Sep 13,Tottenham Hotspur FC,Everton FC
+8,1,Sep 14,Sheffield United FC,Wolverhampton Wanderers FC
+9,1,Sep 14,Brighton & Hove Albion FC,Chelsea FC
+10,2,Sep 19,Everton FC,West Bromwich Albion FC
+11,2,Sep 19,Leeds United FC,Fulham FC
+12,2,Sep 19,Manchester United,Crystal Palace FC
+13,2,Sep 19,Arsenal FC,West Ham United FC
+14,2,Sep 20,Southampton FC,Tottenham Hotspur FC
+15,2,Sep 20,Newcastle United FC,Brighton & Hove Albion FC
+16,2,Sep 20,Chelsea FC,Liverpool FC
+17,2,Sep 20,Leicester City FC,Burnley FC
+18,2,Sep 21,Aston Villa FC,Sheffield United FC
+19,2,Sep 21,Wolverhampton Wanderers FC,Manchester City FC
+20,3,Sep 26,Brighton & Hove Albion FC,Manchester United
+21,3,Sep 26,Crystal Palace FC,Everton FC
+22,3,Sep 26,West Bromwich Albion FC,Chelsea FC
+23,3,Sep 26,Burnley FC,Southampton FC
+24,3,Sep 27,Sheffield United FC,Leeds United FC
+25,3,Sep 27,Tottenham Hotspur FC,Newcastle United FC
+26,3,Sep 27,Manchester City FC,Leicester City FC
+27,3,Sep 27,West Ham United FC,Wolverhampton Wanderers FC
+28,3,Sep 28,Fulham FC,Aston Villa FC
+29,3,Sep 28,Liverpool FC,Arsenal FC
+30,4,Oct 3,Arsenal FC,Sheffield United FC
+31,4,Oct 3,Aston Villa FC,Liverpool FC
+32,4,Oct 3,Chelsea FC,Crystal Palace FC
+33,4,Oct 3,Everton FC,Brighton & Hove Albion FC
+34,4,Oct 3,Leeds United FC,Manchester City FC
+35,4,Oct 3,Leicester City FC,West Ham United FC
+36,4,Oct 3,Manchester United,Tottenham Hotspur FC
+37,4,Oct 3,Newcastle United FC,Burnley FC
+38,4,Oct 3,Southampton FC,West Bromwich Albion FC
+39,4,Oct 3,Wolverhampton Wanderers FC,Fulham FC
+40,5,Oct 17,Chelsea FC,Southampton FC
+41,5,Oct 17,Crystal Palace FC,Brighton & Hove Albion FC
+42,5,Oct 17,Everton FC,Liverpool FC
+43,5,Oct 17,Leeds United FC,Wolverhampton Wanderers FC
+44,5,Oct 17,Leicester City FC,Aston Villa FC
+45,5,Oct 17,Manchester City FC,Arsenal FC
+46,5,Oct 17,Newcastle United FC,Manchester United
+47,5,Oct 17,Sheffield United FC,Fulham FC
+48,5,Oct 17,Tottenham Hotspur FC,West Ham United FC
+49,5,Oct 17,West Bromwich Albion FC,Burnley FC
+50,6,Oct 24,Arsenal FC,Leicester City FC
+51,6,Oct 24,Aston Villa FC,Leeds United FC
+52,6,Oct 24,Brighton & Hove Albion FC,West Bromwich Albion FC
+53,6,Oct 24,Burnley FC,Tottenham Hotspur FC
+54,6,Oct 24,Fulham FC,Crystal Palace FC
+55,6,Oct 24,Liverpool FC,Sheffield United FC
+56,6,Oct 24,Manchester United,Chelsea FC
+57,6,Oct 24,Southampton FC,Everton FC
+58,6,Oct 24,West Ham United FC,Manchester City FC
+59,6,Oct 24,Wolverhampton Wanderers FC,Newcastle United FC
+60,7,Oct 31,Aston Villa FC,Southampton FC
+61,7,Oct 31,Burnley FC,Chelsea FC
+62,7,Oct 31,Fulham FC,West Bromwich Albion FC
+63,7,Oct 31,Leeds United FC,Leicester City FC
+64,7,Oct 31,Liverpool FC,West Ham United FC
+65,7,Oct 31,Manchester United,Arsenal FC
+66,7,Oct 31,Newcastle United FC,Everton FC
+67,7,Oct 31,Sheffield United FC,Manchester City FC
+68,7,Oct 31,Tottenham Hotspur FC,Brighton & Hove Albion FC
+69,7,Oct 31,Wolverhampton Wanderers FC,Crystal Palace FC
+70,8,Nov 7,Arsenal FC,Aston Villa FC
+71,8,Nov 7,Brighton & Hove Albion FC,Burnley FC
+72,8,Nov 7,Chelsea FC,Sheffield United FC
+73,8,Nov 7,Crystal Palace FC,Leeds United FC
+74,8,Nov 7,Everton FC,Manchester United
+75,8,Nov 7,Leicester City FC,Wolverhampton Wanderers FC
+76,8,Nov 7,Manchester City FC,Liverpool FC
+77,8,Nov 7,Southampton FC,Newcastle United FC
+78,8,Nov 7,West Bromwich Albion FC,Tottenham Hotspur FC
+79,8,Nov 7,West Ham United FC,Fulham FC
+80,9,Nov 21,Aston Villa FC,Brighton & Hove Albion FC
+81,9,Nov 21,Burnley FC,Crystal Palace FC
+82,9,Nov 21,Fulham FC,Everton FC
+83,9,Nov 21,Leeds United FC,Arsenal FC
+84,9,Nov 21,Liverpool FC,Leicester City FC
+85,9,Nov 21,Manchester United,West Bromwich Albion FC
+86,9,Nov 21,Newcastle United FC,Chelsea FC
+87,9,Nov 21,Sheffield United FC,West Ham United FC
+88,9,Nov 21,Tottenham Hotspur FC,Manchester City FC
+89,9,Nov 21,Wolverhampton Wanderers FC,Southampton FC
+90,10,Nov 28,Arsenal FC,Wolverhampton Wanderers FC
+91,10,Nov 28,Brighton & Hove Albion FC,Liverpool FC
+92,10,Nov 28,Chelsea FC,Tottenham Hotspur FC
+93,10,Nov 28,Crystal Palace FC,Newcastle United FC
+94,10,Nov 28,Everton FC,Leeds United FC
+95,10,Nov 28,Leicester City FC,Fulham FC
+96,10,Nov 28,Manchester City FC,Burnley FC
+97,10,Nov 28,Southampton FC,Manchester United
+98,10,Nov 28,West Bromwich Albion FC,Sheffield United FC
+99,10,Nov 28,West Ham United FC,Aston Villa FC
+100,11,Dec 5,Aston Villa FC,Newcastle United FC
+101,11,Dec 5,Brighton & Hove Albion FC,Southampton FC
+102,11,Dec 5,Burnley FC,Everton FC
+103,11,Dec 5,Chelsea FC,Leeds United FC
+104,11,Dec 5,Liverpool FC,Wolverhampton Wanderers FC
+105,11,Dec 5,Manchester City FC,Fulham FC
+106,11,Dec 5,Sheffield United FC,Leicester City FC
+107,11,Dec 5,Tottenham Hotspur FC,Arsenal FC
+108,11,Dec 5,West Bromwich Albion FC,Crystal Palace FC
+109,11,Dec 5,West Ham United FC,Manchester United
+110,12,Dec 12,Arsenal FC,Burnley FC
+111,12,Dec 12,Crystal Palace FC,Tottenham Hotspur FC
+112,12,Dec 12,Everton FC,Chelsea FC
+113,12,Dec 12,Fulham FC,Liverpool FC
+114,12,Dec 12,Leeds United FC,West Ham United FC
+115,12,Dec 12,Leicester City FC,Brighton & Hove Albion FC
+116,12,Dec 12,Manchester United,Manchester City FC
+117,12,Dec 12,Newcastle United FC,West Bromwich Albion FC
+118,12,Dec 12,Southampton FC,Sheffield United FC
+119,12,Dec 12,Wolverhampton Wanderers FC,Aston Villa FC
+120,13,Dec 15,Arsenal FC,Southampton FC
+121,13,Dec 15,Aston Villa FC,Burnley FC
+122,13,Dec 15,Fulham FC,Brighton & Hove Albion FC
+123,13,Dec 15,Leeds United FC,Newcastle United FC
+124,13,Dec 15,Leicester City FC,Everton FC
+125,13,Dec 15,Sheffield United FC,Manchester United
+126,13,Dec 15,West Ham United FC,Crystal Palace FC
+127,13,Dec 15,Wolverhampton Wanderers FC,Chelsea FC
+128,13,Dec 16,Liverpool FC,Tottenham Hotspur FC
+129,13,Dec 16,Manchester City FC,West Bromwich Albion FC
+130,14,Dec 19,Brighton & Hove Albion FC,Sheffield United FC
+131,14,Dec 19,Burnley FC,Wolverhampton Wanderers FC
+132,14,Dec 19,Chelsea FC,West Ham United FC
+133,14,Dec 19,Crystal Palace FC,Liverpool FC
+134,14,Dec 19,Everton FC,Arsenal FC
+135,14,Dec 19,Manchester United,Leeds United FC
+136,14,Dec 19,Newcastle United FC,Fulham FC
+137,14,Dec 19,Southampton FC,Manchester City FC
+138,14,Dec 19,Tottenham Hotspur FC,Leicester City FC
+139,14,Dec 19,West Bromwich Albion FC,Aston Villa FC
+140,15,Dec 26,Arsenal FC,Chelsea FC
+141,15,Dec 26,Aston Villa FC,Crystal Palace FC
+142,15,Dec 26,Fulham FC,Southampton FC
+143,15,Dec 26,Leeds United FC,Burnley FC
+144,15,Dec 26,Leicester City FC,Manchester United
+145,15,Dec 26,Liverpool FC,West Bromwich Albion FC
+146,15,Dec 26,Manchester City FC,Newcastle United FC
+147,15,Dec 26,Sheffield United FC,Everton FC
+148,15,Dec 26,West Ham United FC,Brighton & Hove Albion FC
+149,15,Dec 26,Wolverhampton Wanderers FC,Tottenham Hotspur FC
+150,16,Dec 28,Brighton & Hove Albion FC,Arsenal FC
+151,16,Dec 28,Burnley FC,Sheffield United FC
+152,16,Dec 28,Chelsea FC,Aston Villa FC
+153,16,Dec 28,Crystal Palace FC,Leicester City FC
+154,16,Dec 28,Everton FC,Manchester City FC
+155,16,Dec 28,Manchester United,Wolverhampton Wanderers FC
+156,16,Dec 28,Newcastle United FC,Liverpool FC
+157,16,Dec 28,Southampton FC,West Ham United FC
+158,16,Dec 28,Tottenham Hotspur FC,Fulham FC
+159,16,Dec 28,West Bromwich Albion FC,Leeds United FC
+160,17,Jan 2,Brighton & Hove Albion FC,Wolverhampton Wanderers FC
+161,17,Jan 2,Burnley FC,Fulham FC
+162,17,Jan 2,Chelsea FC,Manchester City FC
+163,17,Jan 2,Crystal Palace FC,Sheffield United FC
+164,17,Jan 2,Everton FC,West Ham United FC
+165,17,Jan 2,Manchester United,Aston Villa FC
+166,17,Jan 2,Newcastle United FC,Leicester City FC
+167,17,Jan 2,Southampton FC,Liverpool FC
+168,17,Jan 2,Tottenham Hotspur FC,Leeds United FC
+169,17,Jan 2,West Bromwich Albion FC,Arsenal FC
+170,18,Jan 12,Arsenal FC,Crystal Palace FC
+171,18,Jan 12,Aston Villa FC,Tottenham Hotspur FC
+172,18,Jan 12,Fulham FC,Manchester United
+173,18,Jan 12,Leeds United FC,Southampton FC
+174,18,Jan 12,Leicester City FC,Chelsea FC
+175,18,Jan 12,Sheffield United FC,Newcastle United FC
+176,18,Jan 12,West Ham United FC,West Bromwich Albion FC
+177,18,Jan 12,Wolverhampton Wanderers FC,Everton FC
+178,18,Jan 13,Liverpool FC,Burnley FC
+179,18,Jan 13,Manchester City FC,Brighton & Hove Albion FC
+180,19,Jan 16,Arsenal FC,Newcastle United FC
+181,19,Jan 16,Aston Villa FC,Everton FC
+182,19,Jan 16,Fulham FC,Chelsea FC
+183,19,Jan 16,Leeds United FC,Brighton & Hove Albion FC
+184,19,Jan 16,Leicester City FC,Southampton FC
+185,19,Jan 16,Liverpool FC,Manchester United
+186,19,Jan 16,Manchester City FC,Crystal Palace FC
+187,19,Jan 16,Sheffield United FC,Tottenham Hotspur FC
+188,19,Jan 16,West Ham United FC,Burnley FC
+189,19,Jan 16,Wolverhampton Wanderers FC,West Bromwich Albion FC
+190,20,Jan 26,Brighton & Hove Albion FC,Fulham FC
+191,20,Jan 26,Burnley FC,Aston Villa FC
+192,20,Jan 26,Everton FC,Leicester City FC
+193,20,Jan 26,Manchester United,Sheffield United FC
+194,20,Jan 26,West Bromwich Albion FC,Manchester City FC
+195,20,Jan 27,Chelsea FC,Wolverhampton Wanderers FC
+196,20,Jan 27,Newcastle United FC,Leeds United FC
+197,20,Jan 27,Southampton FC,Arsenal FC
+198,20,Jan 27,Tottenham Hotspur FC,Liverpool FC
+199,20,Jan 27,Crystal Palace FC,West Ham United FC
+200,21,Jan 30,Arsenal FC,Manchester United
+201,21,Jan 30,Brighton & Hove Albion FC,Tottenham Hotspur FC
+202,21,Jan 30,Chelsea FC,Burnley FC
+203,21,Jan 30,Crystal Palace FC,Wolverhampton Wanderers FC
+204,21,Jan 30,Everton FC,Newcastle United FC
+205,21,Jan 30,Leicester City FC,Leeds United FC
+206,21,Jan 30,Manchester City FC,Sheffield United FC
+207,21,Jan 30,Southampton FC,Aston Villa FC
+208,21,Jan 30,West Bromwich Albion FC,Fulham FC
+209,21,Jan 30,West Ham United FC,Liverpool FC
+210,22,Feb 2,Aston Villa FC,West Ham United FC
+211,22,Feb 2,Burnley FC,Manchester City FC
+212,22,Feb 2,Fulham FC,Leicester City FC
+213,22,Feb 2,Leeds United FC,Everton FC
+214,22,Feb 2,Sheffield United FC,West Bromwich Albion FC
+215,22,Feb 2,Wolverhampton Wanderers FC,Arsenal FC
+216,22,Feb 2,Manchester United,Southampton FC
+217,22,Feb 3,Newcastle United FC,Crystal Palace FC
+218,22,Feb 3,Tottenham Hotspur FC,Chelsea FC
+219,22,Feb 3,Liverpool FC,Brighton & Hove Albion FC
+220,23,Feb 6,Aston Villa FC,Arsenal FC
+221,23,Feb 6,Burnley FC,Brighton & Hove Albion FC
+222,23,Feb 6,Fulham FC,West Ham United FC
+223,23,Feb 6,Leeds United FC,Crystal Palace FC
+224,23,Feb 6,Liverpool FC,Manchester City FC
+225,23,Feb 6,Manchester United,Everton FC
+226,23,Feb 6,Newcastle United FC,Southampton FC
+227,23,Feb 6,Sheffield United FC,Chelsea FC
+228,23,Feb 6,Tottenham Hotspur FC,West Bromwich Albion FC
+229,23,Feb 6,Wolverhampton Wanderers FC,Leicester City FC
+230,24,Feb 13,Arsenal FC,Leeds United FC
+231,24,Feb 13,Brighton & Hove Albion FC,Aston Villa FC
+232,24,Feb 13,Chelsea FC,Newcastle United FC
+233,24,Feb 13,Crystal Palace FC,Burnley FC
+234,24,Feb 13,Everton FC,Fulham FC
+235,24,Feb 13,Leicester City FC,Liverpool FC
+236,24,Feb 13,Manchester City FC,Tottenham Hotspur FC
+237,24,Feb 13,Southampton FC,Wolverhampton Wanderers FC
+238,24,Feb 13,West Bromwich Albion FC,Manchester United
+239,24,Feb 13,West Ham United FC,Sheffield United FC
+240,25,Feb 20,Arsenal FC,Manchester City FC
+241,25,Feb 20,Aston Villa FC,Leicester City FC
+242,25,Feb 20,Brighton & Hove Albion FC,Crystal Palace FC
+243,25,Feb 20,Burnley FC,West Bromwich Albion FC
+244,25,Feb 20,Fulham FC,Sheffield United FC
+245,25,Feb 20,Liverpool FC,Everton FC
+246,25,Feb 20,Manchester United,Newcastle United FC
+247,25,Feb 20,Southampton FC,Chelsea FC
+248,25,Feb 20,West Ham United FC,Tottenham Hotspur FC
+249,25,Feb 20,Wolverhampton Wanderers FC,Leeds United FC
+250,26,Feb 27,Chelsea FC,Manchester United
+251,26,Feb 27,Crystal Palace FC,Fulham FC
+252,26,Feb 27,Everton FC,Southampton FC
+253,26,Feb 27,Leeds United FC,Aston Villa FC
+254,26,Feb 27,Leicester City FC,Arsenal FC
+255,26,Feb 27,Manchester City FC,West Ham United FC
+256,26,Feb 27,Newcastle United FC,Wolverhampton Wanderers FC
+257,26,Feb 27,Sheffield United FC,Liverpool FC
+258,26,Feb 27,Tottenham Hotspur FC,Burnley FC
+259,26,Feb 27,West Bromwich Albion FC,Brighton & Hove Albion FC
+260,27,Mar 6,Aston Villa FC,Wolverhampton Wanderers FC
+261,27,Mar 6,Brighton & Hove Albion FC,Leicester City FC
+262,27,Mar 6,Burnley FC,Arsenal FC
+263,27,Mar 6,Chelsea FC,Everton FC
+264,27,Mar 6,Liverpool FC,Fulham FC
+265,27,Mar 6,Manchester City FC,Manchester United
+266,27,Mar 6,Sheffield United FC,Southampton FC
+267,27,Mar 6,Tottenham Hotspur FC,Crystal Palace FC
+268,27,Mar 6,West Bromwich Albion FC,Newcastle United FC
+269,27,Mar 6,West Ham United FC,Leeds United FC
+270,28,Mar 13,Arsenal FC,Tottenham Hotspur FC
+271,28,Mar 13,Crystal Palace FC,West Bromwich Albion FC
+272,28,Mar 13,Everton FC,Burnley FC
+273,28,Mar 13,Fulham FC,Manchester City FC
+274,28,Mar 13,Leeds United FC,Chelsea FC
+275,28,Mar 13,Leicester City FC,Sheffield United FC
+276,28,Mar 13,Manchester United,West Ham United FC
+277,28,Mar 13,Newcastle United FC,Aston Villa FC
+278,28,Mar 13,Southampton FC,Brighton & Hove Albion FC
+279,28,Mar 13,Wolverhampton Wanderers FC,Liverpool FC
+280,29,Mar 20,Brighton & Hove Albion FC,Newcastle United FC
+281,29,Mar 20,Burnley FC,Leicester City FC
+282,29,Mar 20,Crystal Palace FC,Manchester United
+283,29,Mar 20,Fulham FC,Leeds United FC
+284,29,Mar 20,Liverpool FC,Chelsea FC
+285,29,Mar 20,Manchester City FC,Wolverhampton Wanderers FC
+286,29,Mar 20,Sheffield United FC,Aston Villa FC
+287,29,Mar 20,Tottenham Hotspur FC,Southampton FC
+288,29,Mar 20,West Bromwich Albion FC,Everton FC
+289,29,Mar 20,West Ham United FC,Arsenal FC
+290,30,Apr 3,Arsenal FC,Liverpool FC
+291,30,Apr 3,Aston Villa FC,Fulham FC
+292,30,Apr 3,Chelsea FC,West Bromwich Albion FC
+293,30,Apr 3,Everton FC,Crystal Palace FC
+294,30,Apr 3,Leeds United FC,Sheffield United FC
+295,30,Apr 3,Leicester City FC,Manchester City FC
+296,30,Apr 3,Manchester United,Brighton & Hove Albion FC
+297,30,Apr 3,Newcastle United FC,Tottenham Hotspur FC
+298,30,Apr 3,Southampton FC,Burnley FC
+299,30,Apr 3,Wolverhampton Wanderers FC,West Ham United FC
+300,31,Apr 10,Brighton & Hove Albion FC,Everton FC
+301,31,Apr 10,Burnley FC,Newcastle United FC
+302,31,Apr 10,Crystal Palace FC,Chelsea FC
+303,31,Apr 10,Fulham FC,Wolverhampton Wanderers FC
+304,31,Apr 10,Liverpool FC,Aston Villa FC
+305,31,Apr 10,Manchester City FC,Leeds United FC
+306,31,Apr 10,Sheffield United FC,Arsenal FC
+307,31,Apr 10,Tottenham Hotspur FC,Manchester United
+308,31,Apr 10,West Bromwich Albion FC,Southampton FC
+309,31,Apr 10,West Ham United FC,Leicester City FC
+310,32,Apr 17,Arsenal FC,Fulham FC
+311,32,Apr 17,Aston Villa FC,Manchester City FC
+312,32,Apr 17,Chelsea FC,Brighton & Hove Albion FC
+313,32,Apr 17,Everton FC,Tottenham Hotspur FC
+314,32,Apr 17,Leeds United FC,Liverpool FC
+315,32,Apr 17,Leicester City FC,West Bromwich Albion FC
+316,32,Apr 17,Manchester United,Burnley FC
+317,32,Apr 17,Newcastle United FC,West Ham United FC
+318,32,Apr 17,Southampton FC,Crystal Palace FC
+319,32,Apr 17,Wolverhampton Wanderers FC,Sheffield United FC
+320,33,Apr 24,Arsenal FC,Everton FC
+321,33,Apr 24,Aston Villa FC,West Bromwich Albion FC
+322,33,Apr 24,Fulham FC,Tottenham Hotspur FC
+323,33,Apr 24,Leeds United FC,Manchester United
+324,33,Apr 24,Leicester City FC,Crystal Palace FC
+325,33,Apr 24,Liverpool FC,Newcastle United FC
+326,33,Apr 24,Manchester City FC,Southampton FC
+327,33,Apr 24,Sheffield United FC,Brighton & Hove Albion FC
+328,33,Apr 24,West Ham United FC,Chelsea FC
+329,33,Apr 24,Wolverhampton Wanderers FC,Burnley FC
+330,34,May 1,Brighton & Hove Albion FC,Leeds United FC
+331,34,May 1,Burnley FC,West Ham United FC
+332,34,May 1,Chelsea FC,Fulham FC
+333,34,May 1,Crystal Palace FC,Manchester City FC
+334,34,May 1,Everton FC,Aston Villa FC
+335,34,May 1,Manchester United,Liverpool FC
+336,34,May 1,Newcastle United FC,Arsenal FC
+337,34,May 1,Southampton FC,Leicester City FC
+338,34,May 1,Tottenham Hotspur FC,Sheffield United FC
+339,34,May 1,West Bromwich Albion FC,Wolverhampton Wanderers FC
+340,35,May 8,Arsenal FC,West Bromwich Albion FC
+341,35,May 8,Aston Villa FC,Manchester United
+342,35,May 8,Fulham FC,Burnley FC
+343,35,May 8,Leeds United FC,Tottenham Hotspur FC
+344,35,May 8,Leicester City FC,Newcastle United FC
+345,35,May 8,Liverpool FC,Southampton FC
+346,35,May 8,Manchester City FC,Chelsea FC
+347,35,May 8,Sheffield United FC,Crystal Palace FC
+348,35,May 8,West Ham United FC,Everton FC
+349,35,May 8,Wolverhampton Wanderers FC,Brighton & Hove Albion FC
+350,36,May 11,Brighton & Hove Albion FC,West Ham United FC
+351,36,May 11,Burnley FC,Leeds United FC
+352,36,May 11,Everton FC,Sheffield United FC
+353,36,May 11,Manchester United,Leicester City FC
+354,36,May 11,West Bromwich Albion FC,Liverpool FC
+355,36,May 12,Chelsea FC,Arsenal FC
+356,36,May 12,Newcastle United FC,Manchester City FC
+357,36,May 12,Southampton FC,Fulham FC
+358,36,May 12,Tottenham Hotspur FC,Wolverhampton Wanderers FC
+359,36,May 12,Crystal Palace FC,Aston Villa FC
+360,37,May 15,Brighton & Hove Albion FC,Manchester City FC
+361,37,May 15,Burnley FC,Liverpool FC
+362,37,May 15,Chelsea FC,Leicester City FC
+363,37,May 15,Crystal Palace FC,Arsenal FC
+364,37,May 15,Everton FC,Wolverhampton Wanderers FC
+365,37,May 15,Manchester United,Fulham FC
+366,37,May 15,Newcastle United FC,Sheffield United FC
+367,37,May 15,Southampton FC,Leeds United FC
+368,37,May 15,Tottenham Hotspur FC,Aston Villa FC
+369,37,May 15,West Bromwich Albion FC,West Ham United FC
+370,38,May 23,Arsenal FC,Brighton & Hove Albion FC
+371,38,May 23,Aston Villa FC,Chelsea FC
+372,38,May 23,Fulham FC,Newcastle United FC
+373,38,May 23,Leeds United FC,West Bromwich Albion FC
+374,38,May 23,Leicester City FC,Tottenham Hotspur FC
+375,38,May 23,Liverpool FC,Crystal Palace FC
+376,38,May 23,Manchester City FC,Everton FC
+377,38,May 23,Sheffield United FC,Burnley FC
+378,38,May 23,West Ham United FC,Southampton FC
+379,38,May 23,Wolverhampton Wanderers FC,Manchester United
