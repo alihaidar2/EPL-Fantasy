@@ -8,34 +8,69 @@ import json
 request = urlopen("https://fantasy.premierleague.com/api/bootstrap-static/")
 json_data = json.loads(request.read())
 
-# beautifying it makes it one long string
-# json_data = json.dumps(json_data, indent=2)
-
-df = pd.DataFrame(columns={})
-
-
-# use 2 variables since if you use 1 it will return an array
-# col is the name of the attribute
-# value is the value of the attribute
-
+# create all empty dataframes
+df_events = pd.DataFrame(columns={})
 df_game_settings = pd.DataFrame(columns={})
+df_phases = pd.DataFrame(columns={})
+df_teams = pd.DataFrame(columns={})
+df_elements = pd.DataFrame(columns={})
+df_element_stats = pd.DataFrame(columns={})
+df_element_types = pd.DataFrame(columns={})
 
-# creates columns for dataframe
-# populates dataframe but with strigs for the array
+# create and populate events DF
+i = 0
+for col in json_data['events'] :
+    for j in col :
+        df_events.loc[i, j] = str(col[j])
+    i=i+1
+print(df_events)
+
+# create and populate game_settings DF
 for col, value in json_data['game_settings'].items():
     df_game_settings.loc[0, col] = str(value)
 
+# create and populate phases DF
+i = 0
+for col in json_data['phases']:
+    for j in col:
+        df_phases.loc[i, j] = col[j]
+    i = i+1
+
+# create and populate teams DF
+i = 0
+for col in json_data['teams']:
+    for j in col :
+        df_teams.loc[i, j] = col[j]
+    i=i+1
+
+# create and populate elements DF
+i = 0
+for col in json_data['elements']:
+    for j in col :
+        df_elements.loc[i, j] = col[j]
+    i=i+1
+
+# create and populate element_stats DF
+i = 0
+for col in json_data['element_stats']:
+    for j in col:
+        df_element_stats.loc[i, j] = col[j]
+    i=i+1
+
+
+# create and populate element_types
+i = 0
+for col in json_data['element_types'] :
+    for j in col :
+        df_element_types.loc[i, j] = str(col[j])
+    i=i+1
+
+
+
+df_events.to_csv('csv_files/events.csv')
 df_game_settings.to_csv('csv_files/game_settings.csv')
-
-
-
-#
-# json_data['game_settings'][col] prints values
-# 
-
-# for col, y in json_data.items() :
-#     df_game_settings[col] = col
-#     print(df_game_settings)
-#     # print(json_data[col])
-
-
+df_phases.to_csv('csv_files/phases.csv')
+df_teams.to_csv('csv_files/teams.csv')
+df_teams.to_csv('csv_files/elements.csv')
+df_teams.to_csv('csv_files/element_stats.csv')
+df_element_types.to_csv('csv_files/element_types.csv')
