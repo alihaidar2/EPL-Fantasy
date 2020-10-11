@@ -79,5 +79,3 @@ df_final.drop(['Match'], axis=1, inplace=True)
 df_final.to_csv('csv_files/matches_final.csv', index_label="MatchID")
 
 print(df_final.columns)
-
-
