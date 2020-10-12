@@ -64,14 +64,19 @@ for col in json_data['element_types'] :
         df_element_types.loc[i, j] = str(col[j])
     i=i+1
 
+# adds 'id' as the first column
+cols_to_order = ['id']
+new_columns = cols_to_order + (df_teams.columns.drop(cols_to_order).tolist())
+df_teams = df_teams[new_columns]
+new_columns = cols_to_order + (df_elements.columns.drop(cols_to_order).tolist())
+df_elements = df_elements[new_columns]
+
 
 # exporting all data frames to csv
-df_events.to_csv('csv_files/events.csv')
-df_game_settings.to_csv('csv_files/game_settings.csv')
-df_phases.to_csv('csv_files/phases.csv')
-df_teams.to_csv('csv_files/teams.csv')
-df_elements.to_csv('csv_files/elements.csv')
-df_element_stats.to_csv('csv_files/element_stats.csv')
-df_element_types.to_csv('csv_files/element_types.csv')
-
-# yay tamara is the best
+df_events.to_csv('csv_files/events.csv', index=False)
+df_game_settings.to_csv('csv_files/game_settings.csv', index_label='id')
+df_phases.to_csv('csv_files/phases.csv', index=False)
+df_teams.to_csv('csv_files/teams.csv', index=False)
+df_elements.to_csv('csv_files/elements.csv', index=False)
+df_element_stats.to_csv('csv_files/element_stats.csv', index_label='id')
+df_element_types.to_csv('csv_files/element_types.csv', index=False)
