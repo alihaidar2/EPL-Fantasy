@@ -65,7 +65,7 @@ for col in json_data['element_types'] :
     i=i+1
 
 
-
+# exporting all data frames to csv
 df_events.to_csv('csv_files/events.csv')
 df_game_settings.to_csv('csv_files/game_settings.csv')
 df_phases.to_csv('csv_files/phases.csv')
@@ -73,3 +73,5 @@ df_teams.to_csv('csv_files/teams.csv')
 df_elements.to_csv('csv_files/elements.csv')
 df_element_stats.to_csv('csv_files/element_stats.csv')
 df_element_types.to_csv('csv_files/element_types.csv')
+
+# yay tamara is the best
