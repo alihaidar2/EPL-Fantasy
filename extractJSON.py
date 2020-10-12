@@ -23,7 +23,6 @@ for col in json_data['events'] :
     for j in col :
         df_events.loc[i, j] = str(col[j])
     i=i+1
-print(df_events)
 
 # create and populate game_settings DF
 for col, value in json_data['game_settings'].items():
@@ -71,6 +70,6 @@ df_events.to_csv('csv_files/events.csv')
 df_game_settings.to_csv('csv_files/game_settings.csv')
 df_phases.to_csv('csv_files/phases.csv')
 df_teams.to_csv('csv_files/teams.csv')
-df_teams.to_csv('csv_files/elements.csv')
-df_teams.to_csv('csv_files/element_stats.csv')
+df_elements.to_csv('csv_files/elements.csv')
+df_element_stats.to_csv('csv_files/element_stats.csv')
 df_element_types.to_csv('csv_files/element_types.csv')
