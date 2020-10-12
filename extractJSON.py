@@ -64,12 +64,26 @@ for col in json_data['element_types'] :
         df_element_types.loc[i, j] = str(col[j])
     i=i+1
 
-# adds 'id' as the first column
+# moves 'id' to the first column
 cols_to_order = ['id']
 new_columns = cols_to_order + (df_teams.columns.drop(cols_to_order).tolist())
 df_teams = df_teams[new_columns]
 new_columns = cols_to_order + (df_elements.columns.drop(cols_to_order).tolist())
 df_elements = df_elements[new_columns]
+
+
+# fix boolean type (to int)
+df_elements['in_dreamteam'] = (df_elements['in_dreamteam'] == 'TRUE').astype(int)
+df_elements['special'] = (df_elements['special'] == 'TRUE').astype(int)
+df_game_settings['league_ko_first_instead_of_random'] = (df_game_settings['league_ko_first_instead_of_random'] == 'TRUE').astype(int)
+df_game_settings['ui_use_special_shirts'] = (df_game_settings['ui_use_special_shirts'] == 'TRUE').astype(int)
+df_game_settings['sys_vice_captain_enabled'] = (df_game_settings['sys_vice_captain_enabled'] == 'TRUE').astype(int)
+df_events['finished'] = (df_events['finished'] == 'True').astype(int)
+df_events['data_checked'] = (df_events['data_checked'] == 'True').astype(int)
+df_events['is_previous'] = (df_events['is_previous']  == 'True').astype(int)
+df_events['is_current'] = (df_events['is_current'] == 'True').astype(int)
+df_events['is_next'] = (df_events['is_next'] == 'True').astype(int)
+df_teams['unavailable'] = (df_teams['unavailable'] == 'TRUE').astype(int)
 
 
 # exporting all data frames to csv
