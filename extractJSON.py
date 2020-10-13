@@ -2,7 +2,7 @@ from urllib.request import urlopen
 import pandas as pd
 import numpy as np
 import json
-# import requests
+from datetime import datetime
 
 # extract and clean json_data
 request = urlopen("https://fantasy.premierleague.com/api/bootstrap-static/")
@@ -56,7 +56,6 @@ for col in json_data['element_stats']:
         df_element_stats.loc[i, j] = col[j]
     i=i+1
 
-
 # create and populate element_types
 i = 0
 for col in json_data['element_types'] :
@@ -83,8 +82,13 @@ df_events['data_checked'] = (df_events['data_checked'] == 'True').astype(int)
 df_events['is_previous'] = (df_events['is_previous']  == 'True').astype(int)
 df_events['is_current'] = (df_events['is_current'] == 'True').astype(int)
 df_events['is_next'] = (df_events['is_next'] == 'True').astype(int)
-df_teams['unavailable'] = (df_teams['unavailable'] == 'TRUE').astype(int)
+df_teams['unavailable'] = (df_teams['unavailable'] == 'True').astype(int)
+df_element_types['ui_shirt_specific'] = (df_element_types['ui_shirt_specific'] == 'True').astype(int)
 
+# fix formatting for datetime to work in MS SQL SERVER
+def format_date(el):
+    return datetime.strptime(el, '%Y-%m-%dT%H:%M:%SZ').strftime('%m-%d-%Y %H:%M:%S')
+df_events['deadline_time'] = df_events['deadline_time'].apply(format_date)
 
 # exporting all data frames to csv
 df_events.to_csv('csv_files/events.csv', index=False)
