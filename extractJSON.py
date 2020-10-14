@@ -85,10 +85,21 @@ df_events['is_next'] = (df_events['is_next'] == 'True').astype(int)
 df_teams['unavailable'] = (df_teams['unavailable'] == 'True').astype(int)
 df_element_types['ui_shirt_specific'] = (df_element_types['ui_shirt_specific'] == 'True').astype(int)
 
+# fix 'None' to 0
+df_events['highest_scoring_entry'] = df_events['highest_scoring_entry'].replace('None',0)
+df_events['highest_score'] = df_events['highest_score'].replace('None',0)
+df_events['most_selected'] = df_events['most_selected'].replace('None',0)
+df_events['most_transferred_in'] = df_events['most_transferred_in'].replace('None',0)
+df_events['top_element'] = df_events['top_element'].replace('None',0)
+df_events['most_captained'] = df_events['most_captained'].replace('None',0)
+df_events['most_vice_captained'] = df_events['most_vice_captained'].replace('None',0)
+
 # fix formatting for datetime to work in MS SQL SERVER
 def format_date(el):
     return datetime.strptime(el, '%Y-%m-%dT%H:%M:%SZ').strftime('%m-%d-%Y %H:%M:%S')
+    
 df_events['deadline_time'] = df_events['deadline_time'].apply(format_date)
+df_elements['news_added'] = pd.to_datetime(df_elements['news_added'], format='%Y-%m-%dT%H:%M:%SZ')
 
 # exporting all data frames to csv
 df_events.to_csv('csv_files/events.csv', index=False)
