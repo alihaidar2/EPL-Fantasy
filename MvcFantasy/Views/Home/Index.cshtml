@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Display Data";
     string[] TableHeaders = new string[] {
-         "id", "element_type", "web_name", "form", "in_dreamteam", "news", "now_cost", "points_per_game",  "selected_by_percent", 
-         "team",  "total_points", "transfers_in", "transfers_out",   "minutes", "goals_scored", "assists", 
-         "clean_sheets", "goals_conceded", "own_goals", "penalties_saved", "penalties_missed", "yellow_cards", "red_cards", 
-         "saves", "bonus", "bps", "influence", "creativity", "threat", "ict_index"};
+        "Element Type", "First Name", "Last Name", "Form", "Cost", "PPG",  "% Selected", 
+         "Team Id",  "Total Points", "Transfers In", "Transfers Out",  "Minutes Played", "Goals", "Assists", 
+         "Clean Sheets", "Conceded", "Own Goals", "Pens Saved", "Pens Missed", "Yellow Cards", "Red Cards", 
+         "Saves", "Bonus", "BPS", "Influence", "Creativity", "Threat", "ICT Index"};
 
 
-        @* "first_name", "second_name", transfers_out_event, value_form, value_season, transfers_in_event, team_code, special, squad_number, status, news_added, photo, ep_next, ep_this, event_points, chance_of_playing_next_round, chance_of_playing_this_round, code, cost_change_event, 
+        @* "id", "first_name", "second_name", "in_dreamteam", "news", transfers_out_event, value_form, value_season, transfers_in_event, team_code, special, squad_number, status, news_added, photo, ep_next, ep_this, event_points, chance_of_playing_next_round, chance_of_playing_this_round, code, cost_change_event, 
         cost_change_event_fall, cost_change_start, cost_change_start_fall, dreamteam_count, corners_and_indirect_freekicks_order, corners_and_indirect_freekicks_text, direct_freekicks_order, 
         direct_freekicks_text, penalties_order, penalties_text, influence_rank, influence_rank_type, creativity_rank, 
         creativity_rank_type, threat_rank, threat_rank_type, ict_index_rank, ict_index_rank_type,  *@
@@ -15,10 +15,45 @@
     
 }
 
-<div class="table">
-    <table class = "table table-bordered table-hover">
+<style>
+    #myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid #ddd; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+        }
+
+        #myTable {
+        border-collapse: collapse; /* Collapse borders */
+        width: 100%; /* Full-width */
+        border: 1px solid #ddd; /* Add a grey border */
+        font-size: 18px; /* Increase font-size */
+        }
+
+        #myTable th, #myTable td {
+        text-align: left; /* Left-align text */
+        padding: 12px; /* Add padding */
+        }
+
+        #myTable tr {
+        /* Add a bottom border to all table rows */
+        border-bottom: 1px solid #ddd; 
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+        /* Add a grey background color to the table header and on hover */
+        background-color: #f1f1f1;
+    }
+</style>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <table id="myTable" class="table table-bordered table-responsive table-hover">
         <thead>
-            <tr>
+            <tr class = "header">
                 @{
                     foreach (var head in TableHeaders){
                         <th> @head </th>
@@ -26,19 +61,15 @@
                 }
             </tr>
         </thead>
-
-        
         <tbody>
             @{
             if (Model != null) {
                 foreach (var Data in Model) {
-                    <tr>
-                        <td>@Data.id</td>
+                    <tr class = "success">
                         <td>@Data.element_type</td>
-                        <td>@Data.web_name</td>
+                        <td>@Data.first_name</td>
+                        <td>@Data.second_name</td>
                         <td>@Data.form</td>
-                        <td>@Data.in_dreamteam</td>
-                        <td>@Data.news</td>
                         <td>@Data.now_cost</td>
                         <td>@Data.points_per_game</td>
                         <td>@Data.selected_by_percent</td>
@@ -69,4 +100,24 @@
         }
         </tbody>
     </table>
-</div>
+
+<script>
+    function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }       
+        }
+    }
+</script>

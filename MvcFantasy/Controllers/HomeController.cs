@@ -43,7 +43,7 @@ namespace MvcFantasy.Controllers
             {
                 con.Open();
                 com.Connection = con;
-                com.CommandText = "SELECT TOP (100) [id], [element_type], [web_name], [form], [in_dreamteam], [news], [now_cost], [points_per_game], [selected_by_percent], [team], [total_points], [transfers_in], [transfers_out],   [minutes], [goals_scored], [assists], [clean_sheets], [goals_conceded], [own_goals], [penalties_saved], [penalties_missed], [yellow_cards], [red_cards], [saves], [bonus], [bps], [influence], [creativity], [threat], [ict_index] FROM [FantasyEplDB].[dbo].[elements]";
+                com.CommandText = "SELECT * FROM [FantasyEplDB].[dbo].[elements] INNER JOIN element_types ON elements.element_type = element_types.id ORDER BY transfers_in DESC";
                 dr = com.ExecuteReader();
 
                 while (dr.Read()) {
@@ -51,7 +51,8 @@ namespace MvcFantasy.Controllers
                         new Element() {
                             id = (int) dr["id"],
                             element_type = (int) dr["element_type"],
-                            web_name = dr["web_name"].ToString(),
+                            first_name = dr["singular_name_short"].ToString(),
+                            second_name = dr["second_name"].ToString(),
                             form = dr["form"].ToString(),
                             in_dreamteam = (bool) dr["in_dreamteam"],
                             news = dr["news"].ToString(),

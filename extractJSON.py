@@ -93,13 +93,14 @@ df_events['most_transferred_in'] = df_events['most_transferred_in'].replace('Non
 df_events['top_element'] = df_events['top_element'].replace('None',0)
 df_events['most_captained'] = df_events['most_captained'].replace('None',0)
 df_events['most_vice_captained'] = df_events['most_vice_captained'].replace('None',0)
+cols = ["highest_scoring_entry","highest_score","most_selected","most_transferred_in","top_element", "most_captained", "most_vice_captained"]
+df_events[cols] = df_events[cols].replace({'0':np.nan, 0:np.nan})
 
 # fix formatting for datetime to work in MS SQL SERVER
 def format_date(el):
     return datetime.strptime(el, '%Y-%m-%dT%H:%M:%SZ').strftime('%m-%d-%Y %H:%M:%S')
-    
 df_events['deadline_time'] = df_events['deadline_time'].apply(format_date)
-df_elements['news_added'] = pd.to_datetime(df_elements['news_added'], format='%Y-%m-%dT%H:%M:%SZ')
+df_elements['news_added'] = pd.to_datetime(df_elements['news_added'], format='%Y-%m-%dT%H:%M:%S.%fZ')
 
 # exporting all data frames to csv
 df_events.to_csv('csv_files/events.csv', index=False)
