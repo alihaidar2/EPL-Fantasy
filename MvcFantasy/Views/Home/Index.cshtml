@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Display Data";
+    string[] TableHeaders = new string[] {
+         "id", "element_type", "web_name", "form", "in_dreamteam", "news", "now_cost", "points_per_game",  "selected_by_percent", 
+         "team",  "total_points", "transfers_in", "transfers_out",   "minutes", "goals_scored", "assists", 
+         "clean_sheets", "goals_conceded", "own_goals", "penalties_saved", "penalties_missed", "yellow_cards", "red_cards", 
+         "saves", "bonus", "bps", "influence", "creativity", "threat", "ict_index"};
+
+
+        @* "first_name", "second_name", transfers_out_event, value_form, value_season, transfers_in_event, team_code, special, squad_number, status, news_added, photo, ep_next, ep_this, event_points, chance_of_playing_next_round, chance_of_playing_this_round, code, cost_change_event, 
+        cost_change_event_fall, cost_change_start, cost_change_start_fall, dreamteam_count, corners_and_indirect_freekicks_order, corners_and_indirect_freekicks_text, direct_freekicks_order, 
+        direct_freekicks_text, penalties_order, penalties_text, influence_rank, influence_rank_type, creativity_rank, 
+        creativity_rank_type, threat_rank, threat_rank_type, ict_index_rank, ict_index_rank_type,  *@
+
+    
+}
+
+<div class="table">
+    <table class = "table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in TableHeaders){
+                        <th> @head </th>
+                    }
+                }
+            </tr>
+        </thead>
+
+        
+        <tbody>
+            @{
+            if (Model != null) {
+                foreach (var Data in Model) {
+                    <tr>
+                        <td>@Data.id</td>
+                        <td>@Data.element_type</td>
+                        <td>@Data.web_name</td>
+                        <td>@Data.form</td>
+                        <td>@Data.in_dreamteam</td>
+                        <td>@Data.news</td>
+                        <td>@Data.now_cost</td>
+                        <td>@Data.points_per_game</td>
+                        <td>@Data.selected_by_percent</td>
+                        <td>@Data.team</td>
+                        <td>@Data.total_points</td>
+                        <td>@Data.transfers_in</td>
+                        <td>@Data.transfers_out</td>
+                        <td>@Data.minutes</td>
+                        <td>@Data.goals_scored</td>
+                        <td>@Data.assists</td>
+                        <td>@Data.clean_sheets</td>
+                        <td>@Data.goals_conceded</td>
+                        <td>@Data.own_goals</td>
+                        <td>@Data.penalties_saved</td>
+                        <td>@Data.penalties_missed</td>
+                        <td>@Data.yellow_cards</td>
+                        <td>@Data.red_cards</td>
+                        <td>@Data.saves</td>
+                        <td>@Data.bonus</td>
+                        <td>@Data.bps</td>
+                        <td>@Data.influence</td>
+                        <td>@Data.creativity</td>
+                        <td>@Data.threat</td>
+                        <td>@Data.ict_index</td>
+                    </tr>
+                }
+            }
+        }
+        </tbody>
+    </table>
+</div>
