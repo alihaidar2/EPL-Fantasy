@@ -34,11 +34,9 @@ namespace MvcFantasy.Controllers
         }
 
         private void FetchData() {
-            
             if (elements.Count > 0) {
                 elements.Clear();
             }
-
             try
             {
                 con.Open();
@@ -46,12 +44,14 @@ namespace MvcFantasy.Controllers
                 com.CommandText = "SELECT * FROM [FantasyEplDB].[dbo].[elements] INNER JOIN element_types ON elements.element_type = element_types.id ORDER BY transfers_in DESC";
                 dr = com.ExecuteReader();
 
+                // just adds the data to each element
+                // THIS IS NOT what displays 
                 while (dr.Read()) {
                     elements.Add(
                         new Element() {
                             id = (int) dr["id"],
                             element_type = (int) dr["element_type"],
-                            first_name = dr["singular_name_short"].ToString(),
+                            first_name = dr["first_name"].ToString(),
                             second_name = dr["second_name"].ToString(),
                             form = dr["form"].ToString(),
                             in_dreamteam = (bool) dr["in_dreamteam"],

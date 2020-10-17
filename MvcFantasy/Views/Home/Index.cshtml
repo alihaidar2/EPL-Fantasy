@@ -50,68 +50,126 @@
     }
 </style>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<html>
+    <p><button onclick="sortTable()">Sort</button></p>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
     <table id="myTable" class="table table-bordered table-responsive table-hover">
         <thead>
-            <tr class = "header">
+            <tr>
                 @{
                     foreach (var head in TableHeaders){
-                        <th> @head </th>
-                    }
+                        <th onclick="sortTable()"> @head </th>
+                    }        
                 }
             </tr>
         </thead>
         <tbody>
             @{
-            if (Model != null) {
-                foreach (var Data in Model) {
-                    <tr class = "success">
-                        <td>@Data.element_type</td>
-                        <td>@Data.first_name</td>
-                        <td>@Data.second_name</td>
-                        <td>@Data.form</td>
-                        <td>@Data.now_cost</td>
-                        <td>@Data.points_per_game</td>
-                        <td>@Data.selected_by_percent</td>
-                        <td>@Data.team</td>
-                        <td>@Data.total_points</td>
-                        <td>@Data.transfers_in</td>
-                        <td>@Data.transfers_out</td>
-                        <td>@Data.minutes</td>
-                        <td>@Data.goals_scored</td>
-                        <td>@Data.assists</td>
-                        <td>@Data.clean_sheets</td>
-                        <td>@Data.goals_conceded</td>
-                        <td>@Data.own_goals</td>
-                        <td>@Data.penalties_saved</td>
-                        <td>@Data.penalties_missed</td>
-                        <td>@Data.yellow_cards</td>
-                        <td>@Data.red_cards</td>
-                        <td>@Data.saves</td>
-                        <td>@Data.bonus</td>
-                        <td>@Data.bps</td>
-                        <td>@Data.influence</td>
-                        <td>@Data.creativity</td>
-                        <td>@Data.threat</td>
-                        <td>@Data.ict_index</td>
-                    </tr>
+                if (Model != null) {
+                    foreach (var Data in Model) {
+                        <tr>
+                            <td>@Data.element_type</td>
+                            <td>@Data.first_name</td>
+                            <td>@Data.second_name</td>
+                            <td>@Data.form</td>
+                            <td>@Data.now_cost</td>
+                            <td>@Data.points_per_game</td>
+                            <td>@Data.selected_by_percent</td>
+                            <td>@Data.team</td>
+                            <td>@Data.total_points</td>
+                            <td>@Data.transfers_in</td>
+                            <td>@Data.transfers_out</td>
+                            <td>@Data.minutes</td>
+                            <td>@Data.goals_scored</td>
+                            <td>@Data.assists</td>
+                            <td>@Data.clean_sheets</td>
+                            <td>@Data.goals_conceded</td>
+                            <td>@Data.own_goals</td>
+                            <td>@Data.penalties_saved</td>
+                            <td>@Data.penalties_missed</td>
+                            <td>@Data.yellow_cards</td>
+                            <td>@Data.red_cards</td>
+                            <td>@Data.saves</td>
+                            <td>@Data.bonus</td>
+                            <td>@Data.bps</td>
+                            <td>@Data.influence</td>
+                            <td>@Data.creativity</td>
+                            <td>@Data.threat</td>
+                            <td>@Data.ict_index</td>
+                        </tr>
+                    }
                 }
             }
-        }
         </tbody>
     </table>
 
-<script>
-    function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
+    <script>
+                    function sortTable() {
+                        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                        var n = 2;
+                        table = document.getElementById("myTable");
+                        switching = true;
+                        //Set the sorting direction to ascending:
+                        dir = "asc"; 
+                        /*Make a loop that will continue until
+                        no switching has been done:*/
+                        while (switching) {
+                            //start by saying: no switching is done:
+                            switching = false;
+                            rows = table.rows;
+                            /*Loop through all table rows (except the
+                            first, which contains table headers):*/
+                            for (i = 1; i < (rows.length - 1); i++) {
+                                //start by saying there should be no switching:
+                                shouldSwitch = false;
+                                /*Get the two elements you want to compare,
+                                one from current row and one from the next:*/
+                                x = rows[i].getElementsByTagName("TD")[n];
+                                y = rows[i + 1].getElementsByTagName("TD")[n];
+                                /*check if the two rows should switch place,
+                                based on the direction, asc or desc:*/
+                                if (dir == "asc") {
+                                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                    //if so, mark as a switch and break the loop:
+                                    shouldSwitch= true;
+                                    break;
+                                    }
+                                } else if (dir == "desc") {
+                                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                    //if so, mark as a switch and break the loop:
+                                    shouldSwitch = true;
+                                    break;
+                                    }   
+                                }
+                            }
+                            if (shouldSwitch) {
+                                /*If a switch has been marked, make the switch
+                                and mark that a switch has been done:*/
+                                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                                switching = true;
+                                //Each time a switch is done, increase this count by 1:
+                                switchcount ++;      
+                            } else {
+                                /*If no switching has been done AND the direction is "asc",
+                                set the direction to "desc" and run the while loop again.*/
+                                if (switchcount == 0 && dir == "asc") {
+                                    dir = "desc";
+                                    switching = true;
+                                }   
+                            }
+                        }
+                    }
+
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = "";
                 } else {
@@ -119,5 +177,8 @@
                 }
             }       
         }
-    }
-</script>
+        }
+    </script>
+
+</html>
+
