@@ -1,7 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Display Data";
+    ViewData["Title"] = "FPL Players";
     string[] TableHeaders = new string[] {
-        "Element Type", "First Name", "Last Name", "Form", "Cost", "PPG",  "% Selected", 
+        "Position", "First Name", "Last Name", "Form", "Cost", "PPG",  "% Selected", 
          "Team Id",  "Total Points", "Transfers In", "Transfers Out",  "Minutes Played", "Goals", "Assists", 
          "Clean Sheets", "Conceded", "Own Goals", "Pens Saved", "Pens Missed", "Yellow Cards", "Red Cards", 
          "Saves", "Bonus", "BPS", "Influence", "Creativity", "Threat", "ICT Index"};
@@ -15,101 +15,91 @@
     
 }
 
-<style>
-    #myInput {
-        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-        background-position: 10px 12px; /* Position the search icon */
-        background-repeat: no-repeat; /* Do not repeat the icon image */
-        width: 100%; /* Full-width */
-        font-size: 16px; /* Increase font-size */
-        padding: 12px 20px 12px 40px; /* Add some padding */
-        border: 1px solid #ddd; /* Add a grey border */
-        margin-bottom: 12px; /* Add some space below the input */
-        }
-
-        #myTable {
-        border-collapse: collapse; /* Collapse borders */
-        width: 100%; /* Full-width */
-        border: 1px solid #ddd; /* Add a grey border */
-        font-size: 18px; /* Increase font-size */
-        }
-
-        #myTable th, #myTable td {
-        text-align: left; /* Left-align text */
-        padding: 12px; /* Add padding */
-        }
-
-        #myTable tr {
-        /* Add a bottom border to all table rows */
-        border-bottom: 1px solid #ddd; 
-        }
-
-        #myTable tr.header, #myTable tr:hover {
-        /* Add a grey background color to the table header and on hover */
-        background-color: #f1f1f1;
-    }
-</style>
-
 <html>
-    <p><button onclick="sortTable()">Sort</button></p>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-    
-    <table id="myTable" class="table table-bordered table-responsive table-hover">
-        <thead>
-            <tr>
-                @{
-                    int i = 0;
-                    while (i < TableHeaders.Count()) {
-                        foreach (var head in TableHeaders){
-                            <th onclick='sortTable(@i)'> @head </th>
-                            i = i + 1;
-                        } 
-                    }
-                           
-                }
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                if (Model != null) {
-                    foreach (var Data in Model) {
-                        <tr>
-                            <td>@Data.element_type</td>
-                            <td>@Data.first_name</td>
-                            <td>@Data.second_name</td>
-                            <td>@Data.form</td>
-                            <td>@Data.now_cost</td>
-                            <td>@Data.points_per_game</td>
-                            <td>@Data.selected_by_percent</td>
-                            <td>@Data.team</td>
-                            <td>@Data.total_points</td>
-                            <td>@Data.transfers_in</td>
-                            <td>@Data.transfers_out</td>
-                            <td>@Data.minutes</td>
-                            <td>@Data.goals_scored</td>
-                            <td>@Data.assists</td>
-                            <td>@Data.clean_sheets</td>
-                            <td>@Data.goals_conceded</td>
-                            <td>@Data.own_goals</td>
-                            <td>@Data.penalties_saved</td>
-                            <td>@Data.penalties_missed</td>
-                            <td>@Data.yellow_cards</td>
-                            <td>@Data.red_cards</td>
-                            <td>@Data.saves</td>
-                            <td>@Data.bonus</td>
-                            <td>@Data.bps</td>
-                            <td>@Data.influence</td>
-                            <td>@Data.creativity</td>
-                            <td>@Data.threat</td>
-                            <td>@Data.ict_index</td>
-                        </tr>
-                    }
-                }
-            }
-        </tbody>
-    </table>
+    <head>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+        <!-- MDBootstrap Datatables  -->
+        <link href="css/addons/datatables.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        <!-- MDBootstrap Datatables  -->
+        <script type="text/javascript" src="js/addons/datatables.min.js"></script>
 
-    <script>
+        <title> FPL Players </title>
+    </head>
+
+    <body>
+        <p><button onclick="sortTable()">Sort</button></p>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <table id="dtBasicExample" class="table table-striped table-bordered table-responsive table-sm" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    @{
+                        @* int i = 0; *@
+                        @* while (i < TableHeaders.Count()) { *@
+                            foreach (var head in TableHeaders){
+                                <th> @head </th>
+                                @* i = i + 1; *@
+                            } 
+                        @* } *@
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model != null) {
+                        foreach (var Data in Model) {
+                            <tr>
+                                <td>@Data.element_type</td>
+                                <td>@Data.first_name</td>
+                                <td>@Data.second_name</td>
+                                <td>@Data.form</td>
+                                <td>@Data.now_cost</td>
+                                <td>@Data.points_per_game</td>
+                                <td>@Data.selected_by_percent</td>
+                                <td>@Data.team</td>
+                                <td>@Data.total_points</td>
+                                <td>@Data.transfers_in</td>
+                                <td>@Data.transfers_out</td>
+                                <td>@Data.minutes</td>
+                                <td>@Data.goals_scored</td>
+                                <td>@Data.assists</td>
+                                <td>@Data.clean_sheets</td>
+                                <td>@Data.goals_conceded</td>
+                                <td>@Data.own_goals</td>
+                                <td>@Data.penalties_saved</td>
+                                <td>@Data.penalties_missed</td>
+                                <td>@Data.yellow_cards</td>
+                                <td>@Data.red_cards</td>
+                                <td>@Data.saves</td>
+                                <td>@Data.bonus</td>
+                                <td>@Data.bps</td>
+                                <td>@Data.influence</td>
+                                <td>@Data.creativity</td>
+                                <td>@Data.threat</td>
+                                <td>@Data.ict_index</td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </body>
+<script>
+ 
     function sortTable() {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
         var n = 2;
@@ -165,7 +155,6 @@
             }
         }
     }
-
     function sortTable(n) {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
         table = document.getElementById("myTable");
@@ -193,9 +182,9 @@
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                     //if so, mark as a switch and break the loop:
                     shouldSwitch= true;
+                } else if (dir == "desc") {
                     break;
                     }
-                } else if (dir == "desc") {
                     if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                     //if so, mark as a switch and break the loop:
                     shouldSwitch = true;
@@ -220,7 +209,6 @@
             }
         }
     }
-
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
@@ -242,4 +230,3 @@
     </script>
 
 </html>
-
