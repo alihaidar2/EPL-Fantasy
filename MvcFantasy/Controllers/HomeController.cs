@@ -41,7 +41,7 @@ namespace MvcFantasy.Controllers
             {
                 con.Open();
                 com.Connection = con;
-                com.CommandText = "SELECT * FROM [FantasyEplDB].[dbo].[elements] INNER JOIN element_types ON elements.element_type = element_types.id";
+                com.CommandText = "SELECT * FROM [FantasyEplDB].[dbo].[elements] INNER JOIN element_types ON elements.element_type = element_types.id ORDER by goals_scored DESC";
                 dr = com.ExecuteReader();
 
                 // just adds the data to each element

@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "FPL Players";
     string[] TableHeaders = new string[] {
-        "Position", "First Name", "Last Name", "Form", "Cost", "PPG",  "% Selected", 
-         "Team Id",  "Total Points", "Transfers In", "Transfers Out",  "Minutes Played", "Goals", "Assists", 
-         "Clean Sheets", "Conceded", "Own Goals", "Pens Saved", "Pens Missed", "Yellow Cards", "Red Cards", 
-         "Saves", "Bonus", "BPS", "Influence", "Creativity", "Threat", "ICT Index"};
+        "Position", "First Name", "Last Name",  "Total Points", "Goals", "Assists", 
+         "Clean Sheets", "Form", "Cost", "PPG",  "%", 
+         "Team", "Transfers In", "Transfers Out",  "Minutes Played", "Conceded", "Own Goals", "Pens Saved", "Pens Missed", "Yellow Cards", "Red Cards", 
+         "Saves", "Bonus"};
 
 
         @* "id", "first_name", "second_name", "in_dreamteam", "news", transfers_out_event, value_form, value_season, transfers_in_event, team_code, special, squad_number, status, news_added, photo, ep_next, ep_this, event_points, chance_of_playing_next_round, chance_of_playing_this_round, code, cost_change_event, 
@@ -17,47 +17,42 @@
 
 <html>
     <head>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-        <!-- MDBootstrap Datatables  -->
-        <link href="css/addons/datatables.min.css" rel="stylesheet">
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-        <!-- MDBootstrap Datatables  -->
-        <script type="text/javascript" src="js/addons/datatables.min.js"></script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+        <style>
+            table.center {
+                margin-left:auto; 
+                margin-right:auto;
+            }
+        </style>
 
         <title> FPL Players </title>
+
     </head>
 
     <body>
-        <p><button onclick="sortTable()">Sort</button></p>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-        <table id="dtBasicExample" class="table table-striped table-bordered table-responsive table-sm" cellspacing="0" width="100%">
+        <h1>
+            Players
+        </h1>
+
+        <div>
+            <table id="myTable" class="center table-striped table-bordered table-responsive table-sm fixed" cellspacing="0" width="100%">
+  
             <thead>
                 <tr>
                     @{
-                        @* int i = 0; *@
-                        @* while (i < TableHeaders.Count()) { *@
-                            foreach (var head in TableHeaders){
-                                <th> @head </th>
-                                @* i = i + 1; *@
-                            } 
-                        @* } *@
+                        foreach (var head in TableHeaders){
+                            <th> @head </th>
+                        }
                     }
                 </tr>
             </thead>
+            
             <tbody>
                 @{
                     if (Model != null) {
@@ -66,18 +61,18 @@
                                 <td>@Data.element_type</td>
                                 <td>@Data.first_name</td>
                                 <td>@Data.second_name</td>
+                                <td>@Data.total_points</td>
+                                <td>@Data.goals_scored</td>
+                                <td>@Data.assists</td>
+                                <td>@Data.clean_sheets</td>
                                 <td>@Data.form</td>
                                 <td>@Data.now_cost</td>
                                 <td>@Data.points_per_game</td>
                                 <td>@Data.selected_by_percent</td>
                                 <td>@Data.team</td>
-                                <td>@Data.total_points</td>
                                 <td>@Data.transfers_in</td>
                                 <td>@Data.transfers_out</td>
                                 <td>@Data.minutes</td>
-                                <td>@Data.goals_scored</td>
-                                <td>@Data.assists</td>
-                                <td>@Data.clean_sheets</td>
                                 <td>@Data.goals_conceded</td>
                                 <td>@Data.own_goals</td>
                                 <td>@Data.penalties_saved</td>
@@ -86,147 +81,36 @@
                                 <td>@Data.red_cards</td>
                                 <td>@Data.saves</td>
                                 <td>@Data.bonus</td>
-                                <td>@Data.bps</td>
-                                <td>@Data.influence</td>
-                                <td>@Data.creativity</td>
-                                <td>@Data.threat</td>
-                                <td>@Data.ict_index</td>
                             </tr>
                         }
                     }
                 }
             </tbody>
+
+            <tfoot>
+                <tr>
+                    @{
+                        foreach (var head in TableHeaders){
+                            <th> @head </th>
+                        }
+                    }
+                </tr>
+            </tfoot>
+
         </table>
+
+        </div>
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+        <script>$('#myTable').DataTable();</script>
+    
     </body>
-<script>
- 
-    function sortTable() {
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-        var n = 2;
-        table = document.getElementById("myTable");
-        switching = true;
-        //Set the sorting direction to ascending:
-        dir = "asc"; 
-        /*Make a loop that will continue until
-        no switching has been done:*/
-        while (switching) {
-            //start by saying: no switching is done:
-            switching = false;
-            rows = table.rows;
-            /*Loop through all table rows (except the
-            first, which contains table headers):*/
-            for (i = 1; i < (rows.length - 1); i++) {
-                //start by saying there should be no switching:
-                shouldSwitch = false;
-                /*Get the two elements you want to compare,
-                one from current row and one from the next:*/
-                x = rows[i].getElementsByTagName("TD")[n];
-                y = rows[i + 1].getElementsByTagName("TD")[n];
-                /*check if the two rows should switch place,
-                based on the direction, asc or desc:*/
-                if (dir == "asc") {
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                    //if so, mark as a switch and break the loop:
-                    shouldSwitch= true;
-                    break;
-                    }
-                } else if (dir == "desc") {
-                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                    //if so, mark as a switch and break the loop:
-                    shouldSwitch = true;
-                    break;
-                    }   
-                }
-            }
-            if (shouldSwitch) {
-                /*If a switch has been marked, make the switch
-                and mark that a switch has been done:*/
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
-                //Each time a switch is done, increase this count by 1:
-                switchcount ++;      
-            } else {
-                /*If no switching has been done AND the direction is "asc",
-                set the direction to "desc" and run the while loop again.*/
-                if (switchcount == 0 && dir == "asc") {
-                    dir = "desc";
-                    switching = true;
-                }   
-            }
-        }
-    }
-    function sortTable(n) {
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-        table = document.getElementById("myTable");
-        switching = true;
-        //Set the sorting direction to ascending:
-        dir = "asc"; 
-        /*Make a loop that will continue until
-        no switching has been done:*/
-        while (switching) {
-            //start by saying: no switching is done:
-            switching = false;
-            rows = table.rows;
-            /*Loop through all table rows (except the
-            first, which contains table headers):*/
-            for (i = 1; i < (rows.length - 1); i++) {
-                //start by saying there should be no switching:
-                shouldSwitch = false;
-                /*Get the two elements you want to compare,
-                one from current row and one from the next:*/
-                x = rows[i].getElementsByTagName("TD")[n];
-                y = rows[i + 1].getElementsByTagName("TD")[n];
-                /*check if the two rows should switch place,
-                based on the direction, asc or desc:*/
-                if (dir == "asc") {
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                    //if so, mark as a switch and break the loop:
-                    shouldSwitch= true;
-                } else if (dir == "desc") {
-                    break;
-                    }
-                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                    //if so, mark as a switch and break the loop:
-                    shouldSwitch = true;
-                    break;
-                    }
-                }
-            }
-            if (shouldSwitch) {
-                /*If a switch has been marked, make the switch
-                and mark that a switch has been done:*/
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
-                //Each time a switch is done, increase this count by 1:
-                switchcount ++;      
-            } else {
-                /*If no switching has been done AND the direction is "asc",
-                set the direction to "desc" and run the while loop again.*/
-                if (switchcount == 0 && dir == "asc") {
-                    dir = "desc";
-                    switching = true;
-                }
-            }
-        }
-    }
-    function myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-            }
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }       
-    }
-    </script>
 
 </html>
