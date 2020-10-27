@@ -14417,13 +14417,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/Player/Player.cshtml",
-      "TargetPath": "Views\\Player\\Player.cshtml",
+      "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/Tools/Player.cshtml",
+      "TargetPath": "Views\\Tools\\Player.cshtml",
       "FileKind": "mvc"
     },
     {

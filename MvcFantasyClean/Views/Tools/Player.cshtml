@@ -2,8 +2,9 @@
     ViewData["Title"] = "Players";
     string[] TableHeaders = new string[] {
         "Player", "Name", "Team", "Position", 
-        "Cost",  "Points", "Value", 
-        "Minutes", "In", "% Sel."
+        "Cost",  "Points", "Value", "Minutes",
+        "In", "%", "Goals", "Assists",
+        "Conceded", "Saves"
     };
 }
 
@@ -19,27 +20,19 @@
         <link href="@Url.Content("~/Content/themes/vendor/bootstrap-theme.min.css")" rel="stylesheet" />
         
 
-        @* <style>
-            table.center {
-                margin-left:auto; 
-                margin-right:auto;
-                margin-bottom:auto;
-            }
-        </style> *@
+        <style>
+
+            th { text-align: center; font-weight: bold }
+        
+        </style>
 
     </head>
 
     <body>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-
         <h1> Players </h1>
 
-        <div class="dropdown show">
+        @* <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown link
             </a>
@@ -49,10 +42,13 @@
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Something else here</a>
             </div>
-        </div>
+        </div> *@
 
         <div class="container">
-            <table id="myTable" class="table" cellspacing="0" width="100%">
+            
+            
+            <table id="myTable" class="table table-responsive table-striped table-hover" cellspacing="0" width="100%">
+            
                 <thead>
                     <tr>
                         @{
@@ -70,7 +66,7 @@
                                 <tr>
                                     @* these also need to be the same as model *@
                                     <td>@Data.PlayerId</td>
-                                    <td>@Data.second_name</td>
+                                    <td class="fix-col">@Data.second_name</td>
                                     <td>@Data.team</td>
                                     <td>@Data.position</td>
                                     <td>@Data.cost</td>
@@ -79,6 +75,11 @@
                                     <td>@Data.minutes</td>
                                     <td>@Data.transfers_in</td>
                                     <td>@Data.selected_by</td>
+                                    <td>@Data.goals_scored</td>
+                                    <td>@Data.assists</td>
+                                    <td>@Data.goals_conceded</td>
+                                    <td>@Data.saves</td>
+
                                 </tr>
                             }
                         }
@@ -97,7 +98,45 @@
             </table>
         </div>
         
+        @* <script>
+            $('#myTable').DataTable({
+                lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                createdRow: function (row, data, index) {
+                    if (data[4].replace(/[\$,]/g, '') * 1 < 100){
+                        $('td', row).eq(4).addClass('text-success');
+                    }
+                }
+            });
+        </script> *@
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
         <script>$('#myTable').DataTable();</script>
+        @* <script>
+            $('#myTable').DataTable({
+                initComplete: function () {
+                    this.api().columns().every( function () {
+                        var column = this;
+                        var select = $('<select><option value=""></option></select>')
+                            .appendTo( $(column.footer()).empty() )
+                            .on( 'change', function() {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+                                column
+                                    .search(val ? '^'+val+'$' : '', true, false)
+                                    .draw();
+                            });
+                        column.data().unique().sort().each( function (d,j) {
+                            select.append( '<option value="'+d+'">'+d+'</option>')
+                        });
+                    });
+                }
+            });
+                    
+        </script> *@
 
     </body>
     

@@ -16,5 +16,10 @@ namespace MvcFantasyClean.Models {
         public int minutes  {get; set;} 
         public int transfers_in {get; set;} 
         public double selected_by {get; set;} 
+        public int goals_scored {get; set;}
+        public int assists {get; set;}
+        public int goals_conceded {get; set;}
+        public int saves {get; set;}
+        
     }
 }
