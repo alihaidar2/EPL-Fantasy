@@ -41,3 +41,4 @@
 /Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
 /Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
 /Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/obj/Debug/netcoreapp3.1/Razor/Views/Tools/Player.cshtml.g.cs
+/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/obj/Debug/netcoreapp3.1/Razor/Views/Tools/Teams.cshtml.g.cs

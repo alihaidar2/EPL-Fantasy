@@ -17,6 +17,7 @@ namespace MvcFantasyClean.Controllers
         SqlDataReader dataReader;
         SqlConnection con = new SqlConnection();
         List<Player> players = new List<Player>();
+        List<Team> teams = new List<Team>();
         private readonly ILogger<HomeController> _logger;
 
         public ToolsController(ILogger<HomeController> logger)
@@ -72,7 +73,48 @@ namespace MvcFantasyClean.Controllers
             }
         }
 
-        
+        public IActionResult Teams() {
+            FetchTeamData();
+            return View(teams);
+        }
+        private void FetchTeamData() {
+            if (teams.Count > 0) {
+                teams.Clear();
+            }
+            try {
+                con.Open();
+                com.Connection = con;
+                com.CommandText = "SELECT * FROM [FantasyDB].[dbo].[fpl_teams]";
+                dataReader = com.ExecuteReader();
+
+                while (dataReader.Read()) {
+                    teams.Add(
+                        // the variable names should match the model variable names
+                        new Team() {
+                            TeamId = (int) dataReader["TeamId"],
+                            name = dataReader["name"].ToString(),
+                            short_name = dataReader["short_name"].ToString(),
+                            strength = (int) dataReader["strength"],
+                            strength_overall_home = (int) dataReader["strength_overall_home"],
+                            strength_overall_away = (int) dataReader["strength_overall_away"],
+                            strength_attack_home = (int) dataReader["strength_attack_home"],
+                            strength_attack_away = (int) dataReader["strength_attack_away"],
+                            strength_defence_home = (int) dataReader["strength_defence_home"],
+                            strength_defence_away = (int) dataReader["strength_defence_away"],
+                            pulse_id = (int) dataReader["pulse_id"],
+                            code = (int) dataReader["code"],
+                            
+                        }
+                    );
+                }
+                con.Close();
+
+            }
+            catch (System.Exception ex) {
+                throw ex;
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

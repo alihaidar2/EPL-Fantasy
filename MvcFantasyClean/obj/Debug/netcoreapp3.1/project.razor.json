@@ -14430,6 +14430,11 @@
       "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/Tools/Teams.cshtml",
+      "TargetPath": "Views\\Tools\\Teams.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
