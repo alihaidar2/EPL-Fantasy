@@ -24,16 +24,22 @@ slim_elements_df['value'] = slim_elements_df.value_season.astype(float)
 slim_elements_df['selected_by'] = slim_elements_df.selected_by_percent.astype(float)
 
 slim_elements_df = slim_elements_df.drop(columns=['selected_by_percent','value_season','element_type'])
+teams_df = teams_df.drop(columns=['draw','form','loss', 'played', 'points', 'position', 'team_division', 'unavailable', 'win'])
+teams_df = teams_df.rename(columns={"id" : "TeamId"})
 
 # mean values for each team
 team_pivot = slim_elements_df.pivot_table(index='team',values='value',aggfunc=np.mean).reset_index()
 
 # dataframes for each position: can use them for histograms
-fwd_df = slim_elements_df.loc[slim_elements_df.position == 'Forward']
-mid_df = slim_elements_df.loc[slim_elements_df.position == 'Midfielder']
-def_df = slim_elements_df.loc[slim_elements_df.position == 'Defender']
-goal_df = slim_elements_df.loc[slim_elements_df.position == 'Goalkeeper']
+# fwd_df = slim_elements_df.loc[slim_elements_df.position == 'Forward']
+# mid_df = slim_elements_df.loc[slim_elements_df.position == 'Midfielder']
+# def_df = slim_elements_df.loc[slim_elements_df.position == 'Defender']
+# goal_df = slim_elements_df.loc[slim_elements_df.position == 'Goalkeeper']
 
 # reorder and export to csv
-slim_elements_df = slim_elements_df[['second_name', 'team', 'position', 'total_points', 'value', 'minutes', 'transfers_in', 'selected_by']]
-slim_elements_df.to_csv('fpl_data.csv', index=True, index_label="PlayerId")
+slim_elements_df = slim_elements_df[['second_name', 'team', 'position', 'now_cost', 'total_points', 'value', 'minutes', 'transfers_in', 'selected_by']]
+teams_df = teams_df[['TeamId', 'name', 'short_name','strength','strength_overall_home','strength_overall_away','strength_attack_home',	'strength_attack_away',	'strength_defence_home','strength_defence_away','pulse_id', 'code']]
+slim_elements_df.to_csv('/Users/alihaidar/Projects/Python/fantasyepl/TryAgain/fpl_players.csv', index=True, index_label="PlayerId")
+teams_df.to_csv('/Users/alihaidar/Projects/Python/fantasyepl/TryAgain/fpl_teams.csv', index=False)
+
+# print(elements_types_df.head())
