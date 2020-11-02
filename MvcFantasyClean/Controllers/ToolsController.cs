@@ -115,6 +115,10 @@ namespace MvcFantasyClean.Controllers
             }
         }
 
+        public IActionResult Fixtures() {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

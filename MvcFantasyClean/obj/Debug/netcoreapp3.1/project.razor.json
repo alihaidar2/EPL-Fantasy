@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/Tools/Fixtures.cshtml",
+      "TargetPath": "Views\\Tools\\Fixtures.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/alihaidar/Projects/Python/fantasyepl/MvcFantasyClean/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

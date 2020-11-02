@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Players";
+    ViewData["Title"] = "Teams";
     string[] TableHeaders = new string[] {
         "TeamId", "Name", "Short Name", "Strength", 
         "Home Strength",  "Away Strength", 
@@ -9,18 +9,19 @@
 }
 
 <html>
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">        
-        <link href="@Url.Content("~/Content/themes/vendor/bootstrap.min.css")" rel="stylesheet" />
-        <link href="@Url.Content("~/Content/themes/vendor/bootstrap-theme.min.css")" rel="stylesheet" />
-        
-        <style>
-            th { text-align: center; font-weight: bold }
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+ 
+        <style> 
+            th { text-align: center; font-weight: bold } 
+            .datatable-column-width {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         </style>
 
     </head>
@@ -30,63 +31,65 @@
         <h1> Teams </h1>
 
         <div class="container">
-        <table id="myTable" class="table table-responsive table-striped table-hover" cellspacing="0" width="100%">
+            <table id="myTable" class="table table-responsive table-striped table-hover" cellspacing="0" width="100%">
+            
+                <thead>
+                    <tr>
+                        @{
+                            foreach (var head in TableHeaders){
+                                <th> @head </th>
+                            }
+                        }
+                    </tr>
+                </thead>
 
-            <thead>
-                <tr>
+                <tbody>
                     @{
-                        foreach (var head in TableHeaders) {
-                            <th> @head </th>
+                        if (Model != null) {
+                            foreach (var Data in Model) {
+                                <tr>
+                                    @* these also need to be the same as model *@
+                                    <td>@Data.TeamId</td>
+                                    <td>@Data.name</td>
+                                    <td>@Data.short_name</td>
+                                    <td>@Data.strength</td>
+                                    <td>@Data.strength_overall_home</td>
+                                    <td>@Data.strength_overall_away</td>
+                                    <td>@Data.strength_attack_home</td>
+                                    <td>@Data.strength_attack_away</td>
+                                    <td>@Data.strength_defence_home</td>
+                                    <td>@Data.strength_defence_away</td>
+                                </tr>
+                            }
                         }
                     }
-                </tr>
-            </thead>
+                </tbody>
 
-            <tbody>
-                @{
-                    if (Model != null) {
-                        foreach (var Data in Model) {
-                            <tr>
-                                @* these also need to be the same as model *@
-                                <td>@Data.TeamId</td>
-                                <td>@Data.name</td>
-                                <td>@Data.short_name</td>
-                                <td>@Data.strength</td>
-                                <td>@Data.strength_overall_home</td>
-                                <td>@Data.strength_overall_away</td>
-                                <td>@Data.strength_attack_home</td>
-                                <td>@Data.strength_attack_away</td>
-                                <td>@Data.strength_defence_home</td>
-                                <td>@Data.strength_defence_away</td>
-                                <td>@Data.pulse_id</td>
-                                <td>@Data.code</td>
-                            </tr>
+                <tfoot>
+                    <tr>
+                        @{
+                            foreach (var head in TableHeaders){
+                                <th> @head </th>
+                            }
                         }
-                    }
-                }
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    @{
-                        foreach (var head in TableHeaders){
-                            <th> @head </th>
-                        }
-                    }
-                </tr>
-            </tfoot>
-        
-        </table>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
+        
+  
+        
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+        
         <script>$('#myTable').DataTable();</script>
 
     </body>
-
-
+    
 </html>

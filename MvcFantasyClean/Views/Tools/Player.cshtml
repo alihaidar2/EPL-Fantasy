@@ -20,7 +20,12 @@
         <link href="@Url.Content("~/Content/themes/vendor/bootstrap-theme.min.css")" rel="stylesheet" />
         
 
-        <style> th { text-align: center; font-weight: bold } </style>
+        <style> th { text-align: center; font-weight: bold } 
+                .datatable-column-width {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+        </style>
 
     </head>
 
@@ -60,7 +65,7 @@
                                 <tr>
                                     @* these also need to be the same as model *@
                                     <td>@Data.PlayerId</td>
-                                    <td class="fix-col">@Data.second_name</td>
+                                    <td>@Data.second_name</td>
                                     <td>@Data.team</td>
                                     <td>@Data.position</td>
                                     <td>@Data.cost</td>
@@ -108,30 +113,6 @@
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
         <script>$('#myTable').DataTable();</script>
-        @* <script>
-            $('#myTable').DataTable({
-                initComplete: function () {
-                    this.api().columns().every( function () {
-                        var column = this;
-                        var select = $('<select><option value=""></option></select>')
-                            .appendTo( $(column.footer()).empty() )
-                            .on( 'change', function() {
-                                var val = $.fn.dataTable.util.escapeRegex(
-                                    $(this).val()
-                                );
-                                column
-                                    .search(val ? '^'+val+'$' : '', true, false)
-                                    .draw();
-                            });
-                        column.data().unique().sort().each( function (d,j) {
-                            select.append( '<option value="'+d+'">'+d+'</option>')
-                        });
-                    });
-                }
-            });
-                    
-        </script> *@
-
     </body>
     
 </html>
