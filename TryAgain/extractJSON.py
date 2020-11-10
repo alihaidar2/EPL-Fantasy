@@ -84,7 +84,6 @@ for i in teams :
         else :
             teamGames.append(row['Home'] + ' (Away) ' + str(row['Date']))
     j += 1
-    print(teamGames, j)
     fpl_fixtures_df.loc[j] = np.array(teamGames)
 
 print(fpl_fixtures_df.head(5))
