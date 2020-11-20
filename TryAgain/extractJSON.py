@@ -86,6 +86,6 @@ for i in teams :
     j += 1
     fpl_fixtures_df.loc[j] = np.array(teamGames)
 
-print(fpl_fixtures_df.head(5))
+print(fpl_fixtures_df)
 
 fpl_fixtures_df.to_csv('/Users/alihaidar/Projects/Python/fantasyepl/TryAgain/fpl_fixtures.csv', index=False)
